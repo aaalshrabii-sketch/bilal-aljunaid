@@ -23,9 +23,10 @@ const nextConfig: NextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
-  turbopack: {
+  // ✅ تعطيل Turbopack في الإنتاج
+  turbopack: process.env.NODE_ENV === 'development' ? {
     root: process.cwd(),
-  },
+  } : undefined,
 };
 
 export default withNextIntl(nextConfig);
