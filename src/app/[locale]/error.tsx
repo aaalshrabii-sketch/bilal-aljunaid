@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
 
 export default function Error({
@@ -11,8 +10,6 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  const t = useTranslations('common');
-
   useEffect(() => {
     console.error('Application Error:', error);
   }, [error]);

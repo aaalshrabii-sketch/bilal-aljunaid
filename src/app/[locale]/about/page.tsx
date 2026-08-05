@@ -2,7 +2,6 @@ import { Container } from '@/components/shared/Container/Container';
 import { AboutStats } from '@/components/features/About/AboutStats';
 import { Button } from '@/components/ui/Button';
 import companyData from '@/data/company.json';
-import { CheckCircle2 } from 'lucide-react';
 import { generateMetadata as getSiteMetadata } from '../metadata';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

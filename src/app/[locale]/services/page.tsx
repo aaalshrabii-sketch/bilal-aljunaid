@@ -83,12 +83,13 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         <Container>
           <div className="flex flex-col gap-12">
             {services.map((service, index) => {
-              const Icon = LucideIcons[service.icon as keyof typeof LucideIcons] as React.ElementType;
+              const iconsMap = LucideIcons as unknown as Record<string, React.ComponentType<{ className?: string }>>;
+              const IconComponent = iconsMap[service.icon] || LucideIcons.HelpCircle;
               return (
                 <Card key={index} variant="elevated" className="flex flex-col lg:flex-row overflow-hidden group">
                   <div className="bg-background/50 p-10 lg:w-1/3 flex items-center justify-center border-b lg:border-b-0 lg:border-e border-border">
                      <div className="w-24 h-24 rounded-full bg-accent/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-accent transition-all duration-300">
-                        <Icon className="w-12 h-12 text-accent group-hover:text-white transition-colors duration-300" />
+                        <IconComponent className="w-12 h-12 text-accent group-hover:text-white transition-colors duration-300" />
                      </div>
                   </div>
                   <div className="p-10 lg:w-2/3 flex flex-col justify-center">

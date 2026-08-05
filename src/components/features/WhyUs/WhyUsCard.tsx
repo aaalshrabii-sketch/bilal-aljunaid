@@ -12,7 +12,8 @@ interface WhyUsCardProps {
 }
 
 export function WhyUsCard({ iconName, title, description, index }: WhyUsCardProps) {
-  const Icon = LucideIcons[iconName] as React.ElementType;
+  const iconsMap = LucideIcons as unknown as Record<string, React.ComponentType<{ className?: string }>>;
+  const IconComponent = iconsMap[iconName as string] || LucideIcons.HelpCircle;
 
   return (
     <motion.div
@@ -24,7 +25,7 @@ export function WhyUsCard({ iconName, title, description, index }: WhyUsCardProp
     >
       <Card className="p-8 h-full group hover:shadow-glow dark:hover:shadow-glow transition-all duration-300 bg-cards border border-border/50 hover:border-accent">
         <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300 text-accent">
-          <Icon className="w-6 h-6" />
+          <IconComponent className="w-6 h-6" />
         </div>
         <h3 className="text-xl font-bold text-text mb-3">{title}</h3>
         <p className="text-text-secondary leading-relaxed text-sm">

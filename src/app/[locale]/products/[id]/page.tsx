@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/Button';
 import productsData from '@/data/products.json';
 import { notFound } from 'next/navigation';
 import { CheckCircle2, MessageCircle } from 'lucide-react';
-import Link from 'next/link';
 import { use } from 'react';
 
 export default function ProductDetailsPage({ params }: { params: Promise<{ locale: string, id: string }> }) {

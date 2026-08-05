@@ -2,13 +2,12 @@
 
 import * as React from 'react';
 import { use } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, LayoutGrid, List } from 'lucide-react';
 import { Container } from '@/components/shared/Container/Container';
 import { ProductCard } from '@/components/features/Products/ProductCard';
 import productsData from '@/data/products.json';
-import { Input } from '@/components/ui/Input';
 import { cn } from '@/lib/utils';
 
 export default function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {

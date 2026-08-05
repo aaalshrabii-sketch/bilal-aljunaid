@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Container } from '@/components/shared/Container/Container';
@@ -9,7 +8,7 @@ import { FooterLinks } from './FooterLinks';
 import { FooterContact } from './FooterContact';
 import navData from '@/data/navigation.json';
 import companyData from '@/data/company.json';
-import { MessageCircle, Youtube, Linkedin } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 export function Footer() {
   const locale = useLocale() as 'ar' | 'en';
