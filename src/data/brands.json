@@ -1,0 +1,38 @@
+[
+  {
+    "id": "b-001",
+    "name": { "ar": "قطع الغيار", "en": "Spare Parts" },
+    "description": {
+      "ar": "تشكيلة واسعة من قطع غيار المولدات والمحركات الديزل للماركات العالمية",
+      "en": "A wide range of diesel generator and engine spare parts for global brands"
+    },
+    "icon": "Settings"
+  },
+  {
+    "id": "b-002",
+    "name": { "ar": "زيوت المحركات", "en": "Motor Oils" },
+    "description": {
+      "ar": "زيوت محركات الديزل والبترول والهيدروليك عالية الجودة",
+      "en": "High-quality diesel, petroleum, and hydraulic engine oils"
+    },
+    "icon": "Droplets"
+  },
+  {
+    "id": "b-003",
+    "name": { "ar": "الفلاتر", "en": "Filters" },
+    "description": {
+      "ar": "فلاتر عالية الجودة لمحركات الديزل لضمان أعلى كفاءة",
+      "en": "High-quality filters for diesel engines to ensure maximum efficiency"
+    },
+    "icon": "Filter"
+  },
+  {
+    "id": "b-004",
+    "name": { "ar": "كمبريشنات الهواء", "en": "Air Compressors" },
+    "description": {
+      "ar": "كمبريشنات هواء متطورة للمعدات الصناعية والمولدات",
+      "en": "Advanced air compressors for industrial equipment and generators"
+    },
+    "icon": "Wind"
+  }
+]

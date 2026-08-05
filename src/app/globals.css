@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-cards: var(--cards);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-hero: var(--hero);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-border: var(--border);
+
+  --font-arabic: var(--font-arabic), sans-serif;
+  --font-english: var(--font-english), sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --background: #F8FAFC;
+    --cards: #FFFFFF;
+    --primary: #0F172A;
+    --primary-light: #1E293B;
+    --hero: #0F172A;
+    --text: #0F172A;
+    --text-secondary: #334155;
+    --accent: #D4A017;
+    --accent-light: #FBBF24;
+    --border: #E2E8F0;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: #0B1120;
+    --cards: #1E293B;
+    --primary: #F8FAFC;
+    --primary-light: #F1F5F9;
+    --hero: #0D1526;
+    --text: #FFFFFF;
+    --text-secondary: #CBD5E1;
+    --accent: #FBBF24;
+    --accent-light: #D4A017;
+    --border: #334155;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero always stays dark regardless of theme */
+.hero-section {
+  background-color: var(--hero);
+}

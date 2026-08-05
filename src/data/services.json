@@ -1,0 +1,54 @@
+[
+  {
+    "id": "s-001",
+    "icon": "Settings",
+    "name": { "ar": "قطع غيار", "en": "Spare Parts" },
+    "description": {
+      "ar": "مجموعة شاملة من قطع غيار المولدات والمحركات الديزل، مع إمكانية التخصيص حسب الطلب للماركات العالمية.",
+      "en": "A comprehensive range of diesel generator and engine spare parts, with the ability to customize according to demand for global brands."
+    },
+    "features": {
+      "ar": ["ضمان تلبية احتياجات العملاء بأعلى جودة", "زيادة كفاءة التشغيل", "تقليل فترات التوقف"],
+      "en": ["Ensuring customer needs with the highest quality", "Increasing operational efficiency", "Reducing downtime"]
+    }
+  },
+  {
+    "id": "s-002",
+    "icon": "Droplets",
+    "name": { "ar": "زيوت محركات", "en": "Motor Oils" },
+    "description": {
+      "ar": "مجموعة متكاملة من زيت محركات الديزل والبترول والهيدروليك، المصممة لتحسين أداء المحركات وتوفير الحماية اللازمة ضد التآكل والاحتكاك.",
+      "en": "An integrated range of diesel, petroleum, and hydraulic engine oils, designed to improve engine performance and provide necessary protection against wear and friction."
+    },
+    "features": {
+      "ar": ["تحسين أداء المحركات", "الحماية من التآكل والاحتكاك", "تدعم الأداء في ظروف التشغيل القاسية"],
+      "en": ["Improving engine performance", "Protection against wear and friction", "Supporting performance in harsh conditions"]
+    }
+  },
+  {
+    "id": "s-003",
+    "icon": "Filter",
+    "name": { "ar": "فلاتر", "en": "Filters" },
+    "description": {
+      "ar": "فلاتر عالية الجودة لمحركات الديزل لحماية المحرك وضمان كفاءة التشغيل.",
+      "en": "High-quality filters for diesel engines to protect the engine and ensure operating efficiency."
+    },
+    "features": {
+      "ar": ["حماية المحرك", "كفاءة عالية", "عمر تشغيلي طويل"],
+      "en": ["Engine protection", "High efficiency", "Long operational lifespan"]
+    }
+  },
+  {
+    "id": "s-004",
+    "icon": "Wrench",
+    "name": { "ar": "صيانة وإصلاح", "en": "Maintenance & Repair" },
+    "description": {
+      "ar": "خدمات صيانة وإصلاح شاملة لجميع محركات الديزل والمولدات الكهربائية، بفريق من المهندسين ذوي الخبرة.",
+      "en": "Comprehensive maintenance and repair services for all diesel engines and electric generators, with a team of experienced engineers."
+    },
+    "features": {
+      "ar": ["فريق من المهندسين ذوي الخبرة", "حلول مخصصة تلبي احتياجات العملاء", "ضمان استمرارية التشغيل بكفاءة عالية"],
+      "en": ["Team of experienced engineers", "Customized solutions to meet customer needs", "Ensuring continuity of operation with high efficiency"]
+    }
+  }
+]

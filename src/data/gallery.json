@@ -1,0 +1,8 @@
+[
+  { "id": "1", "url": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800", "title": { "ar": "مستودعاتنا", "en": "Our Warehouses" } },
+  { "id": "2", "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800", "title": { "ar": "معدات ثقيلة", "en": "Heavy Equipment" } },
+  { "id": "3", "url": "https://images.unsplash.com/photo-1590458872294-01be1c9058b8?auto=format&fit=crop&q=80&w=800", "title": { "ar": "قطع غيار المحركات", "en": "Engine Spare Parts" } },
+  { "id": "4", "url": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800", "title": { "ar": "فريق العمل", "en": "Our Team" } },
+  { "id": "5", "url": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800", "title": { "ar": "فلاتر الديزل", "en": "Diesel Filters" } },
+  { "id": "6", "url": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=800", "title": { "ar": "الصيانة", "en": "Maintenance" } }
+]

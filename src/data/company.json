@@ -1,0 +1,53 @@
+{
+  "name": {
+    "ar": "بلال الجنيد للتجارة والاستيراد",
+    "en": "Bilal Al-Junaid for Trade and Import"
+  },
+  "tagline": {
+    "ar": "قطع غيار معدات الديزل - فلاتر - زيوت محركات",
+    "en": "Diesel Spare Parts - Filters - Motor Oils"
+  },
+  "slogan": {
+    "ar": "كل شحنة هي بداية فصل جديد من الإنجاز",
+    "en": "Every shipment is the beginning of a new chapter of achievement"
+  },
+  "description": {
+    "ar": "نحن شركة بلال الجنيد للتجارة والاستيراد، متخصصون في توفير حلول الديزل المتكاملة. نقدم مجموعة شاملة من قطع غيار المولدات والمحركات الديزل مع إمكانية التخصيص حسب الطلب للماركات العالمية. نركز على ضمان تلبية احتياجات عملائنا بأعلى جودة، مما يساهم في زيادة كفاءة التشغيل وتقليل فترات التوقف.",
+    "en": "We are Bilal Al-Junaid for Trade and Import, specializing in providing integrated diesel solutions. We offer a comprehensive range of diesel generator and engine spare parts with the ability to customize according to demand for global brands. We focus on ensuring our customers' needs are met with the highest quality, contributing to increased operational efficiency and reduced downtime."
+  },
+  "vision": {
+    "ar": "أن نكون الشريك المثالي للنجاح في الاستيراد",
+    "en": "To be the ideal partner for success in import"
+  },
+  "mission": {
+    "ar": "تلبية احتياجات العملاء بأعلى جودة مع ضمان سرعة التسليم",
+    "en": "Meeting customer needs with the highest quality while ensuring fast delivery"
+  },
+  "values": {
+    "ar": ["الجودة", "الثقة", "الالتزام", "الإتقان", "سرعة التسليم"],
+    "en": ["Quality", "Trust", "Commitment", "Excellence", "Fast Delivery"]
+  },
+  "stats": {
+    "yearsExperience": 15,
+    "clients": 500,
+    "products": 2000,
+    "brands": 20
+  },
+  "contact": {
+    "phone": "+967 779932222 / +967 779924444",
+    "whatsapp": "967779924444",
+    "email": "bilalaljunaid3@gmail.com",
+    "address": {
+      "ar": "اليمن - صنعاء - شارع عمران - جوار سوق غثيم",
+      "en": "Yemen - Sana'a - Imran Street - Next to Ghathim Market"
+    },
+    "workingHours": {
+      "ar": "السبت - الخميس: 8:00 صباحاً - 10:00 مساءً",
+      "en": "Sat - Thu: 8:00 AM - 10:00 PM"
+    }
+  },
+  "footerMessage": {
+    "ar": "نعتز بفرصة العمل معكم ونتطلع إلى إسهاماتكم القيمة",
+    "en": "We are proud to work with you and look forward to your valuable contributions"
+  }
+}

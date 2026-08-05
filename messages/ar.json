@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "خدماتنا",
+    "products": "المنتجات",
+    "brands": "الماركات",
+    "contact": "اتصل بنا"
+  },
+  "common": {
+    "readMore": "اقرأ المزيد",
+    "contactUs": "تواصل معنا",
+    "learnMore": "اعرف أكثر"
+  },
+  "contact": {
+    "title": "تواصل معنا",
+    "subtitle": "اختيارك المثالي لشريك النجاح في الاستيراد. نحن هنا للإجابة على جميع استفساراتكم.",
+    "name": "الاسم الكامل",
+    "namePlaceholder": "أدخل اسمك الكامل",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "example@email.com",
+    "phone": "رقم الجوال",
+    "phonePlaceholder": "+967 7XX XXX XXX",
+    "subject": "الموضوع",
+    "subjectPlaceholder": "اختر موضوع الرسالة",
+    "message": "الرسالة",
+    "messagePlaceholder": "اكتب رسالتك هنا...",
+    "send": "إرسال الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "success": "✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.",
+    "address": "معلومات التواصل",
+    "workingHours": "ساعات العمل",
+    "whatsappBtn": "تواصل عبر واتساب"
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "name": {
+      "ar": "فلتر زيت محرك ديزل 4000",
+      "en": "Diesel Engine Oil Filter 4000"
+    },
+    "description": {
+      "ar": "فلتر زيت عالي الجودة متوافق مع المولدات الصناعية",
+      "en": "High quality oil filter compatible with industrial generators"
+    },
+    "category": "filters",
+    "image": "/images/placeholder-product.jpg"
+  },
+  {
+    "id": "2",
+    "name": {
+      "ar": "زيت محركات ديزل 15W-40",
+      "en": "Diesel Engine Oil 15W-40"
+    },
+    "description": {
+      "ar": "زيت محركات ديزل فائق الأداء للخدمة الشاقة",
+      "en": "Premium heavy duty diesel engine oil"
+    },
+    "category": "oils",
+    "image": "/images/placeholder-product.jpg"
+  },
+  {
+    "id": "3",
+    "name": {
+      "ar": "مضخة وقود ديزل",
+      "en": "Diesel Fuel Pump"
+    },
+    "description": {
+      "ar": "مضخة وقود ذات كفاءة عالية لمحركات الديزل",
+      "en": "High efficiency fuel pump for diesel engines"
+    },
+    "category": "spare_parts",
+    "image": "/images/placeholder-product.jpg"
+  },
+  {
+    "id": "4",
+    "name": {
+      "ar": "كمبريسور هواء 100 لتر",
+      "en": "Air Compressor 100L"
+    },
+    "description": {
+      "ar": "كمبريسور هواء صناعي متين للاستخدام المستمر",
+      "en": "Durable industrial air compressor for continuous use"
+    },
+    "category": "compressors",
+    "image": "/images/placeholder-product.jpg"
+  },
+  {
+    "id": "5",
+    "name": {
+      "ar": "سير محرك دينامو",
+      "en": "Dynamo Engine Belt"
+    },
+    "description": {
+      "ar": "سير محرك عالي التحمل للمولدات والمعدات",
+      "en": "Heavy duty engine belt for generators and equipment"
+    },
+    "category": "spare_parts",
+    "image": "/images/placeholder-product.jpg"
+  },
+  {
+    "id": "6",
+    "name": {
+      "ar": "فلتر هواء معدات ثقيلة",
+      "en": "Heavy Equipment Air Filter"
+    },
+    "description": {
+      "ar": "فلتر هواء مصمم للبيئات القاسية والغبار",
+      "en": "Air filter designed for harsh environments and dust"
+    },
+    "category": "filters",
+    "image": "/images/placeholder-product.jpg"
+  }
+]

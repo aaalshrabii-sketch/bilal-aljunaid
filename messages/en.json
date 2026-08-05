@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Our Services",
+    "products": "Products",
+    "brands": "Brands",
+    "contact": "Contact Us"
+  },
+  "common": {
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Your ideal choice for a successful import partner. We're here to answer all your inquiries.",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "example@email.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+967 7XX XXX XXX",
+    "subject": "Subject",
+    "subjectPlaceholder": "Choose a subject",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "✅ Your message was sent successfully! We'll get back to you soon.",
+    "address": "Contact Information",
+    "workingHours": "Working Hours",
+    "whatsappBtn": "Chat on WhatsApp"
+  }
+}
