@@ -76,18 +76,21 @@ export default function ContactPage() {
       label: t('phoneLabel'),
       value: companyData.contact.phoneFormatted,
       href: `tel:+967${companyData.contact.phoneNumber}`,
+      ltr: true,
     },
     {
       icon: <Phone className="w-5 h-5 opacity-75" />,
       label: t('landline'),
       value: companyData.contact.landline,
       href: `tel:${companyData.contact.landline}`,
+      ltr: true,
     },
     {
       icon: <Mail className="w-5 h-5" />,
       label: isArabic ? 'البريد الإلكتروني' : 'Email',
       value: companyData.contact.email,
       href: `mailto:${companyData.contact.email}`,
+      ltr: true,
     },
     {
       icon: <Clock className="w-5 h-5" />,
@@ -239,12 +242,14 @@ export default function ContactPage() {
                   <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 shrink-0">
                     {info.icon}
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <p className="text-sm font-semibold text-text-secondary mb-1">{info.label}</p>
                     {info.href ? (
-                      <a href={info.href} className="text-text hover:text-accent transition-colors font-semibold" dir={info.href.includes('tel') || info.href.includes('mailto') ? 'ltr' : undefined}>
-                        {info.value}
-                      </a>
+                      <div dir={(info as {ltr?: boolean}).ltr ? 'ltr' : undefined} className={(info as {ltr?: boolean}).ltr ? 'text-left' : undefined}>
+                        <a href={info.href} className="text-text hover:text-accent transition-colors font-semibold">
+                          {info.value}
+                        </a>
+                      </div>
                     ) : (
                       <p className="text-text font-semibold">{info.value}</p>
                     )}
