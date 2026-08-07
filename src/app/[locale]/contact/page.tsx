@@ -245,7 +245,8 @@ export default function ContactPage() {
                       <p className="text-text font-medium">
                         <a
                           href={info.href}
-                          className="hover:text-accent transition-colors"
+                          className="hover:text-accent transition-colors inline-block"
+                          dir={info.href.startsWith('tel:') || info.href.startsWith('mailto:') ? 'ltr' : undefined}
                         >
                           {info.value}
                         </a>

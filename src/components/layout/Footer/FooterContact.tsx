@@ -19,13 +19,13 @@ export function FooterContact({ title, address, phone, email }: FooterContactPro
         </li>
         <li className="flex items-center gap-3">
           <Phone className="w-5 h-5 text-accent shrink-0" />
-          <a href={`tel:+${companyData.contact.phoneNumber}`} className="hover:text-accent transition-colors" dir="rtl">
+          <a href={`tel:+${companyData.contact.phoneNumber}`} className="hover:text-accent transition-colors inline-block" dir="ltr">
             {phone}
           </a>
         </li>
         <li className="flex items-center gap-3">
           <Phone className="w-5 h-5 text-accent shrink-0 opacity-75" />
-          <a href="tel:01324523" className="hover:text-accent transition-colors" dir="rtl">
+          <a href="tel:01324523" className="hover:text-accent transition-colors inline-block" dir="ltr">
             01324523
           </a>
         </li>
