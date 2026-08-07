@@ -8,7 +8,8 @@ import { FooterLinks } from './FooterLinks';
 import { FooterContact } from './FooterContact';
 import navData from '@/data/navigation.json';
 import companyData from '@/data/company.json';
-import { MessageCircle } from 'lucide-react';
+import socialData from '@/data/social.json';
+import { MessageCircle, Send, Music } from 'lucide-react';
 
 export function Footer() {
   const locale = useLocale() as 'ar' | 'en';
@@ -32,17 +33,26 @@ export function Footer() {
             <p className="text-sm text-text-secondary leading-relaxed max-w-xs">
               {companyData.slogan[locale]}
             </p>
-            {/* WhatsApp social */}
+            {/* Social Icons */}
             <div className="flex items-center gap-3">
-              <a
-                href={`https://wa.me/${companyData.contact.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-text-secondary hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-300"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle className="w-5 h-5" />
-              </a>
+              {socialData.map((social) => {
+                let IconComponent = MessageCircle;
+                if (social.icon === 'Send') IconComponent = Send;
+                if (social.icon === 'Music') IconComponent = Music;
+
+                return (
+                  <a
+                    key={social.id}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-text-secondary hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 hover:scale-110"
+                    aria-label={locale === 'ar' ? social.name : social.nameEn}
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 

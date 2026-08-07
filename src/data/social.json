@@ -1,5 +1,23 @@
 [
-  { "name": "LinkedIn", "url": "#", "icon": "linkedin" },
-  { "name": "Twitter", "url": "#", "icon": "twitter" },
-  { "name": "Instagram", "url": "#", "icon": "instagram" }
+  {
+    "id": "whatsapp",
+    "name": "واتساب",
+    "nameEn": "WhatsApp",
+    "icon": "MessageCircle",
+    "url": "https://wa.me/967779924444"
+  },
+  {
+    "id": "telegram",
+    "name": "تليجرام",
+    "nameEn": "Telegram",
+    "icon": "Send",
+    "url": "https://t.me/bilalaljunaid"
+  },
+  {
+    "id": "tiktok",
+    "name": "تيك توك",
+    "nameEn": "TikTok",
+    "icon": "Music",
+    "url": "https://www.tiktok.com/@bilalaljunaid"
+  }
 ]
