@@ -76,21 +76,18 @@ export default function ContactPage() {
       label: t('phoneLabel'),
       value: companyData.contact.phoneFormatted,
       href: `tel:+967${companyData.contact.phoneNumber}`,
-      ltr: true,
     },
     {
       icon: <Phone className="w-5 h-5 opacity-75" />,
       label: t('landline'),
       value: companyData.contact.landline,
       href: `tel:${companyData.contact.landline}`,
-      ltr: true,
     },
     {
       icon: <Mail className="w-5 h-5" />,
       label: isArabic ? 'البريد الإلكتروني' : 'Email',
       value: companyData.contact.email,
       href: `mailto:${companyData.contact.email}`,
-      ltr: true,
     },
     {
       icon: <Clock className="w-5 h-5" />,
@@ -239,24 +236,25 @@ export default function ContactPage() {
             <div className="bg-cards rounded-2xl p-8 border border-border/50 shadow-sm flex flex-col gap-6">
               {contactInfo.map((info, i) => (
                 <div key={i} className="flex items-start gap-4 p-4 rounded-xl hover:bg-background transition-colors group">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 shrink-0 mt-1">
                     {info.icon}
                   </div>
-                  <div className="flex-1 flex flex-col gap-0.5">
-                    <p className="text-sm font-semibold text-text-secondary">{info.label}</p>
+                  <div>
+                    <p className="text-sm text-text-secondary font-medium mb-1">{info.label}</p>
                     {info.href ? (
-                      <a
-                        href={info.href}
-                        className="text-text hover:text-accent transition-colors font-semibold"
-                        dir={(info as {ltr?: boolean}).ltr ? 'ltr' : undefined}
-                      >
-                        {info.value}
-                      </a>
+                      <p className="text-text font-medium">
+                        <a
+                          href={info.href}
+                          className="hover:text-accent transition-colors"
+                        >
+                          {info.value}
+                        </a>
+                      </p>
                     ) : (
-                      <p className="text-text font-semibold">{info.value}</p>
+                      <p className="text-text font-medium">{info.value}</p>
                     )}
                     {info.sub && (
-                      <p className="text-text-secondary text-sm font-medium">{info.sub}</p>
+                      <p className="text-text-secondary text-sm font-medium mt-1">{info.sub}</p>
                     )}
                   </div>
                 </div>
