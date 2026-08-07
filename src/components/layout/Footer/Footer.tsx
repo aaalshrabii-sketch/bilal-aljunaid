@@ -67,7 +67,7 @@ export function Footer() {
           <FooterContact
             title={tCommon('contactUs')}
             address={companyData.contact.address[locale]}
-            phone={companyData.contact.phone}
+            phone={companyData.contact.phoneFormatted}
             email={companyData.contact.email}
           />
 

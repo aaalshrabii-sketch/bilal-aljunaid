@@ -19,8 +19,8 @@ export function FooterContact({ title, address, phone, email }: FooterContactPro
         </li>
         <li className="flex items-center gap-3" dir="ltr">
           <Phone className="w-5 h-5 text-accent shrink-0" />
-          <a href="tel:+967779924444" className="hover:text-accent transition-colors">
-            +967 779924444
+          <a href={`tel:${companyData.contact.phoneNumber}`} className="hover:text-accent transition-colors">
+            {phone}
           </a>
         </li>
         <li className="flex items-center gap-3" dir="ltr">
