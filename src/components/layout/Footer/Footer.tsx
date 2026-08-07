@@ -42,6 +42,7 @@ export function Footer() {
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
+      case 'Send':
       case 'Telegram': return <TelegramIcon />;
       case 'Facebook': return <FacebookIcon />;
       default: return <WhatsAppIcon />;
