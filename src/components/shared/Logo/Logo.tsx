@@ -1,8 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 import { useLocale } from 'next-intl';
+import { cn } from '@/lib/utils';
 
 export interface LogoProps {
   className?: string;
@@ -10,22 +11,27 @@ export interface LogoProps {
 
 export function Logo({ className }: LogoProps) {
   const locale = useLocale();
-  const isArabic = locale === 'ar';
 
   return (
-    <Link href={`/${locale}`} className={cn('flex items-center gap-2 group', className)}>
-      <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-accent text-white shadow-glow overflow-hidden">
-        <span className="font-bold text-xl z-10">B</span>
-        <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
-      </div>
-      <div className="flex flex-col">
-        <span className="font-bold text-lg leading-tight text-text">
-          {isArabic ? 'بلال الجنيد' : 'Bilal Al-Junaid'}
+    <Link href={`/${locale}`} className={cn('flex items-center gap-3', className)}>
+      <Image
+        src="/images/logo/logo.jpg"
+        alt="بلال الجنيد للاستيراد"
+        width={45}
+        height={45}
+        className="w-11 h-11 object-contain rounded-lg"
+        priority
+      />
+      <div className="flex flex-col leading-tight">
+        <span className="text-lg font-bold text-text">
+          بلال الجنيد
         </span>
-        <span className="text-xs text-text-secondary">
-          {isArabic ? 'للتجارة والاستيراد' : 'Trading & Import'}
+        <span className="text-xs text-text-muted">
+          للاستيراد
         </span>
       </div>
     </Link>
   );
 }
+
+export default Logo;
