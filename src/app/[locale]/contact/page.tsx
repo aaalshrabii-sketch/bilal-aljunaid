@@ -76,14 +76,14 @@ export default function ContactPage() {
       label: t('phoneLabel'),
       value: companyData.contact.phoneFormatted,
       href: `tel:+967${companyData.contact.phoneNumber}`,
-      rtl: true,
+      ltr: true,
     },
     {
       icon: <Phone className="w-5 h-5 opacity-75" />,
       label: t('landline'),
       value: companyData.contact.landline,
       href: `tel:${companyData.contact.landline}`,
-      rtl: true,
+      ltr: true,
     },
     {
       icon: <Mail className="w-5 h-5" />,
@@ -246,8 +246,8 @@ export default function ContactPage() {
                     <p className="text-sm font-semibold text-text-secondary mb-1">{info.label}</p>
                     {info.href ? (
                       <div 
-                        dir={(info as {ltr?: boolean; rtl?: boolean}).rtl ? 'rtl' : ((info as {ltr?: boolean}).ltr ? 'ltr' : undefined)} 
-                        className={(info as {ltr?: boolean; rtl?: boolean}).rtl ? 'text-right' : ((info as {ltr?: boolean}).ltr ? 'text-left' : undefined)}
+                        dir={(info as {ltr?: boolean}).ltr ? 'ltr' : undefined}
+                        className={(info as {ltr?: boolean}).ltr ? 'text-left' : undefined}
                       >
                         <a href={info.href} className="text-text hover:text-accent transition-colors font-semibold">
                           {info.value}
