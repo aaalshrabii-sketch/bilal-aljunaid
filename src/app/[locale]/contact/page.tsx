@@ -242,22 +242,21 @@ export default function ContactPage() {
                   <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 shrink-0">
                     {info.icon}
                   </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-semibold text-text-secondary mb-1">{info.label}</p>
+                  <div className="flex-1 flex flex-col gap-0.5">
+                    <p className="text-sm font-semibold text-text-secondary">{info.label}</p>
                     {info.href ? (
-                      <div 
+                      <a
+                        href={info.href}
+                        className="text-text hover:text-accent transition-colors font-semibold"
                         dir={(info as {ltr?: boolean}).ltr ? 'ltr' : undefined}
-                        className={(info as {ltr?: boolean}).ltr ? 'text-left' : undefined}
                       >
-                        <a href={info.href} className="text-text hover:text-accent transition-colors font-semibold">
-                          {info.value}
-                        </a>
-                      </div>
+                        {info.value}
+                      </a>
                     ) : (
                       <p className="text-text font-semibold">{info.value}</p>
                     )}
                     {info.sub && (
-                      <p className="text-text-secondary text-sm font-medium mt-1">{info.sub}</p>
+                      <p className="text-text-secondary text-sm font-medium">{info.sub}</p>
                     )}
                   </div>
                 </div>
