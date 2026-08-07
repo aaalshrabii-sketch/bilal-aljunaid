@@ -14,19 +14,21 @@ export function Logo({ className }: LogoProps) {
 
   return (
     <Link href={`/${locale}`} className={cn('flex items-center gap-3', className)}>
-      <Image
-        src="/images/logo/logo.jpg"
-        alt="بلال الجنيد للاستيراد"
-        width={45}
-        height={45}
-        className="w-11 h-11 object-contain rounded-lg"
-        priority
-      />
+      <div className="relative w-11 h-11 flex-shrink-0 bg-white rounded-lg p-1 overflow-hidden shadow-sm border border-border/40">
+        <Image
+          src="/images/logo/logo.jpg"
+          alt="بلال الجنيد للاستيراد"
+          fill
+          className="object-contain"
+          priority
+          sizes="44px"
+        />
+      </div>
       <div className="flex flex-col leading-tight">
-        <span className="text-lg font-bold text-text">
+        <span className="text-base font-bold text-text">
           بلال الجنيد
         </span>
-        <span className="text-xs text-text-muted">
+        <span className="text-[10px] text-text-secondary -mt-0.5">
           للاستيراد
         </span>
       </div>
