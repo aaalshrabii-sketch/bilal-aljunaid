@@ -31,5 +31,9 @@
     "address": "Contact Information",
     "workingHours": "Working Hours",
     "whatsappBtn": "Chat on WhatsApp"
+  },
+  "logo": {
+    "name": "Bilal Al-Junaid",
+    "subtitle": "Trading & Import"
   }
 }

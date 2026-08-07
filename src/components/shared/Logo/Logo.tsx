@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
@@ -14,6 +14,7 @@ export interface LogoProps {
 
 export function Logo({ className, variant }: LogoProps) {
   const locale = useLocale();
+  const t = useTranslations('logo');
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -44,7 +45,7 @@ export function Logo({ className, variant }: LogoProps) {
       )}>
         <Image
           src="/images/logo/logo.jpg"
-          alt="بلال الجنيد للاستيراد"
+          alt={`${t('name')} ${t('subtitle')}`}
           fill
           className="object-contain"
           priority
@@ -52,10 +53,10 @@ export function Logo({ className, variant }: LogoProps) {
       </div>
       <div className="flex flex-col leading-tight">
         <span className="text-lg font-bold text-text">
-          بلال الجنيد
+          {t('name')}
         </span>
         <span className="text-xs text-text-muted -mt-0.5">
-          للاستيراد
+          {t('subtitle')}
         </span>
       </div>
     </Link>
