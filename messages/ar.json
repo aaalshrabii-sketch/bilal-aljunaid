@@ -20,6 +20,8 @@
     "email": "البريد الإلكتروني",
     "emailPlaceholder": "example@email.com",
     "phone": "رقم الجوال",
+    "phoneLabel": "رقم الجوال",
+    "landline": "هاتف أرضي",
     "phonePlaceholder": "+967 7XX XXX XXX",
     "subject": "الموضوع",
     "subjectPlaceholder": "اختر موضوع الرسالة",

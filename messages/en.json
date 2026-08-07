@@ -20,6 +20,8 @@
     "email": "Email Address",
     "emailPlaceholder": "example@email.com",
     "phone": "Phone Number",
+    "phoneLabel": "Mobile",
+    "landline": "Landline",
     "phonePlaceholder": "+967 7XX XXX XXX",
     "subject": "Subject",
     "subjectPlaceholder": "Choose a subject",

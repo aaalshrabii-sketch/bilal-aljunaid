@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
+import companyData from '@/data/company.json';
 
 interface FooterContactProps {
   title: string;
@@ -16,15 +17,25 @@ export function FooterContact({ title, address, phone, email }: FooterContactPro
           <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
           <span>{address}</span>
         </li>
-        <li className="flex items-center gap-3">
+        <li className="flex items-center gap-3" dir="ltr">
           <Phone className="w-5 h-5 text-accent shrink-0" />
-          <a href={`tel:${phone.replace(/\s+/g, '')}`} className="hover:text-accent transition-colors" dir="ltr">
-            {phone}
+          <a href="tel:+967779924444" className="hover:text-accent transition-colors">
+            +967 779924444
           </a>
+        </li>
+        <li className="flex items-center gap-3" dir="ltr">
+          <Phone className="w-5 h-5 text-accent shrink-0 opacity-75" />
+          <div className="flex items-center gap-2">
+            <a href="tel:01324523" className="hover:text-accent transition-colors">
+              01324523
+            </a>
+            <span className="text-text-secondary opacity-60">|</span>
+            <span className="text-xs text-text-secondary">{companyData.contact.landline ? 'هاتف أرضي' : ''}</span>
+          </div>
         </li>
         <li className="flex items-center gap-3">
           <Mail className="w-5 h-5 text-accent shrink-0" />
-          <a href={`mailto:${email}`} className="hover:text-accent transition-colors">
+          <a href={`mailto:${email}`} className="hover:text-accent transition-colors" dir="ltr">
             {email}
           </a>
         </li>

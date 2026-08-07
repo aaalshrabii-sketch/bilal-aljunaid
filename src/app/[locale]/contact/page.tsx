@@ -73,9 +73,15 @@ export default function ContactPage() {
     },
     {
       icon: <Phone className="w-5 h-5" />,
-      label: isArabic ? 'الهاتف' : 'Phone',
-      value: companyData.contact.phone,
-      href: `tel:+967${companyData.contact.whatsapp}`,
+      label: t('phoneLabel'),
+      value: companyData.contact.phoneFormatted,
+      href: `tel:+967${companyData.contact.phoneNumber}`,
+    },
+    {
+      icon: <Phone className="w-5 h-5 opacity-75" />,
+      label: t('landline'),
+      value: companyData.contact.landline,
+      href: `tel:${companyData.contact.landline}`,
     },
     {
       icon: <Mail className="w-5 h-5" />,
