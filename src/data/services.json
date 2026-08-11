@@ -4,12 +4,12 @@
     "icon": "Settings",
     "name": { "ar": "قطع غيار", "en": "Spare Parts" },
     "description": {
-      "ar": "مجموعة شاملة من قطع غيار المولدات والمحركات الديزل، مع إمكانية التخصيص حسب الطلب للماركات العالمية.",
-      "en": "A comprehensive range of diesel generator and engine spare parts, with the ability to customize according to demand for global brands."
+      "ar": "نوفر قطع الغيار الأصلية للمولدات والمحركات الديزل لضمان أطول فترة عمل ممكنة. نعمل مع كبرى الماركات العالمية لتأمين احتياجاتكم بسرعة وموثوقية.",
+      "en": "We provide original spare parts for diesel generators and engines to ensure the longest possible operation. We work with major global brands to secure your needs quickly and reliably."
     },
     "features": {
-      "ar": ["ضمان تلبية احتياجات العملاء بأعلى جودة", "زيادة كفاءة التشغيل", "تقليل فترات التوقف"],
-      "en": ["Ensuring customer needs with the highest quality", "Increasing operational efficiency", "Reducing downtime"]
+      "ar": ["ضمان الجودة", "توصيل سريع", "تطابق مع المواصفات العالمية"],
+      "en": ["Quality guarantee", "Fast delivery", "Compliance with international specs"]
     }
   },
   {
@@ -17,12 +17,12 @@
     "icon": "Droplets",
     "name": { "ar": "زيوت محركات", "en": "Motor Oils" },
     "description": {
-      "ar": "مجموعة متكاملة من زيت محركات الديزل والبترول والهيدروليك، المصممة لتحسين أداء المحركات وتوفير الحماية اللازمة ضد التآكل والاحتكاك.",
-      "en": "An integrated range of diesel, petroleum, and hydraulic engine oils, designed to improve engine performance and provide necessary protection against wear and friction."
+      "ar": "أفضل أنواع زيوت المحركات التي تحافظ على أداء محركك في أقصى الظروف. منتجاتنا تضمن لك تقليل الاحتكاك وحماية الأجزاء الداخلية من التآكل.",
+      "en": "The best types of engine oils that maintain your engine's performance in extreme conditions. Our products ensure reduced friction and protection of internal parts from wear."
     },
     "features": {
-      "ar": ["تحسين أداء المحركات", "الحماية من التآكل والاحتكاك", "تدعم الأداء في ظروف التشغيل القاسية"],
-      "en": ["Improving engine performance", "Protection against wear and friction", "Supporting performance in harsh conditions"]
+      "ar": ["زيوت للخدمة الشاقة", "مقاومة للحرارة العالية", "إطالة عمر المحرك"],
+      "en": ["Heavy duty oils", "High temperature resistance", "Extending engine lifespan"]
     }
   },
   {
@@ -30,25 +30,38 @@
     "icon": "Filter",
     "name": { "ar": "فلاتر", "en": "Filters" },
     "description": {
-      "ar": "فلاتر عالية الجودة لمحركات الديزل لحماية المحرك وضمان كفاءة التشغيل.",
-      "en": "High-quality filters for diesel engines to protect the engine and ensure operating efficiency."
+      "ar": "مجموعة متكاملة من فلاتر الزيت، الهواء، والوقود للحفاظ على نقاء الأجزاء الداخلية ومنع تسلل الشوائب التي قد تعيق كفاءة عمل المعدات.",
+      "en": "An integrated range of oil, air, and fuel filters to maintain the purity of internal parts and prevent impurities that may hinder equipment efficiency."
     },
     "features": {
-      "ar": ["حماية المحرك", "كفاءة عالية", "عمر تشغيلي طويل"],
-      "en": ["Engine protection", "High efficiency", "Long operational lifespan"]
+      "ar": ["فلاتر هواء", "فلاتر زيت", "فلاتر ديزل/وقود"],
+      "en": ["Air filters", "Oil filters", "Diesel/Fuel filters"]
     }
   },
   {
     "id": "s-004",
+    "icon": "Wind",
+    "name": { "ar": "فاصل الهواء", "en": "Air Separators" },
+    "description": {
+      "ar": "نقدم فواصل الهواء لجميع محركات الهواء من أبرز العلامات التجارية مثل Ingersoll Rand، KAESER، Atlas Copco، و Comp Air. تتميز منتجاتنا بأداء موثوق يساهم في تحسين كفاءة النظام وتقليل استهلاك الطاقة.",
+      "en": "We provide air separators for all air engines from leading brands such as Ingersoll Rand, KAESER, Atlas Copco, and Comp Air. Our products feature reliable performance that improves system efficiency and reduces energy consumption."
+    },
+    "features": {
+      "ar": ["أداء موثوق", "تحسين كفاءة النظام", "تقليل استهلاك الطاقة"],
+      "en": ["Reliable performance", "System efficiency improvement", "Energy consumption reduction"]
+    }
+  },
+  {
+    "id": "s-005",
     "icon": "Wrench",
     "name": { "ar": "صيانة وإصلاح", "en": "Maintenance & Repair" },
     "description": {
-      "ar": "خدمات صيانة وإصلاح شاملة لجميع محركات الديزل والمولدات الكهربائية، بفريق من المهندسين ذوي الخبرة.",
-      "en": "Comprehensive maintenance and repair services for all diesel engines and electric generators, with a team of experienced engineers."
+      "ar": "فريق متخصص في صيانة المولدات وتقديم استشارات فنية وحلول متكاملة تساعدك على اختيار المنتجات المناسبة لتقليل فترات التوقف غير المجدولة.",
+      "en": "A specialized team in generator maintenance and providing technical consultations and integrated solutions to help you choose the right products to reduce unscheduled downtime."
     },
     "features": {
-      "ar": ["فريق من المهندسين ذوي الخبرة", "حلول مخصصة تلبي احتياجات العملاء", "ضمان استمرارية التشغيل بكفاءة عالية"],
-      "en": ["Team of experienced engineers", "Customized solutions to meet customer needs", "Ensuring continuity of operation with high efficiency"]
+      "ar": ["دعم فني متخصص", "استشارات مجانية", "زيارات ميدانية"],
+      "en": ["Specialized technical support", "Free consultation", "Field visits"]
     }
   }
 ]

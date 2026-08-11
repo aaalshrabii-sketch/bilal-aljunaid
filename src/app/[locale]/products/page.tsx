@@ -191,7 +191,7 @@ export default function ProductsPage({ params }: { params: Promise<{ locale: str
           </AnimatePresence>
 
           <div className="mt-10 text-center text-text-secondary text-sm font-medium">
-            {isArabic ? 'عرض' : 'Showing'} <span className="text-accent font-bold">{filteredProducts.length}</span> {isArabic ? 'منتج' : 'products'}
+            {isArabic ? 'عرض' : 'Showing'} <span className="text-accent font-bold">{filteredProducts.length}</span> {isArabic ? (filteredProducts.length === 1 ? 'منتج' : 'منتجات') : (filteredProducts.length === 1 ? 'product' : 'products')}
           </div>
         </Container>
       </section>

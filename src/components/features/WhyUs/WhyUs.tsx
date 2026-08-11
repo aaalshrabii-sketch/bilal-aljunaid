@@ -5,49 +5,22 @@ import { Container } from '@/components/shared/Container/Container';
 import { WhyUsCard } from './WhyUsCard';
 import { motion } from 'framer-motion';
 
+import companyData from '@/data/company.json';
+
 export function WhyUs() {
   const locale = useLocale();
   const isArabic = locale === 'ar';
 
   const title = isArabic ? "لماذا نحن" : "Why Choose Us";
   
-  const reasons = [
-    {
-      icon: "Clock",
-      title: isArabic ? "سرعة التسليم" : "Fast Delivery",
-      description: isArabic 
-        ? "نلتزم بأعلى معايير السرعة في تلبية الطلبات وتوصيلها بأمان."
-        : "We commit to the highest standards of speed in fulfilling and delivering orders safely."
-    },
-    {
-      icon: "TrendingUp",
-      title: isArabic ? "زيادة الكفاءة" : "Increased Efficiency",
-      description: isArabic
-        ? "منتجاتنا مصممة لرفع كفاءة معداتك وتقليل فترات التوقف."
-        : "Our products are designed to increase equipment efficiency and reduce downtime."
-    },
-    {
-      icon: "Wallet",
-      title: isArabic ? "توفير التكاليف" : "Cost Savings",
-      description: isArabic
-        ? "أسعار تنافسية وحلول اقتصادية تضمن لك أفضل قيمة مقابل السعر."
-        : "Competitive prices and economical solutions ensure you get the best value for money."
-    },
-    {
-      icon: "Handshake",
-      title: isArabic ? "علاقات موثوقة" : "Trusted Relationships",
-      description: isArabic
-        ? "نبني شراكات طويلة الأمد مبنية على الثقة والشفافية مع عملائنا."
-        : "We build long-term partnerships based on trust and transparency with our clients."
-    },
-    {
-      icon: "Headphones",
-      title: isArabic ? "دعم فني مستمر" : "Continuous Support",
-      description: isArabic
-        ? "فريق دعم فني متخصص متاح دائماً للرد على استفساراتكم وحل مشاكلكم."
-        : "A dedicated technical support team always available to answer your queries and solve issues."
-    }
-  ];
+  const icons = ["Clock", "TrendingUp", "Wallet", "Handshake", "Headphones"];
+  const whyUsData = (companyData.whyUs?.[locale as 'ar' | 'en'] || companyData.whyUs?.ar || []);
+
+  const reasons = whyUsData.map((item, idx) => ({
+    icon: icons[idx] || "Clock",
+    title: item.title,
+    description: item.desc
+  }));
 
   return (
     <section className="py-24 bg-background">

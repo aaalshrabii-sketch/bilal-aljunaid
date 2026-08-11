@@ -1,34 +1,80 @@
 {
   "name": {
     "ar": "بلال الجنيد للتجارة والاستيراد",
-    "en": "Bilal Al-Junaid for Trade and Import"
+    "en": "Bilal Al-Junaid Trading & Import"
   },
   "tagline": {
     "ar": "قطع غيار معدات الديزل - فلاتر - زيوت محركات",
-    "en": "Diesel Spare Parts - Filters - Motor Oils"
+    "en": "Diesel Equipment Spare Parts - Filters - Motor Oils"
   },
   "slogan": {
     "ar": "كل شحنة هي بداية فصل جديد من الإنجاز",
     "en": "Every shipment is the beginning of a new chapter of achievement"
   },
+  "footerSlogan": {
+    "ar": "اختيارك المثالي لشريك النجاح في الاستيراد",
+    "en": "Your ideal choice for a successful partner in import"
+  },
   "description": {
-    "ar": "نحن شركة بلال الجنيد للتجارة والاستيراد، متخصصون في توفير حلول الديزل المتكاملة. نقدم مجموعة شاملة من قطع غيار المولدات والمحركات الديزل مع إمكانية التخصيص حسب الطلب للماركات العالمية. نركز على ضمان تلبية احتياجات عملائنا بأعلى جودة، مما يساهم في زيادة كفاءة التشغيل وتقليل فترات التوقف.",
-    "en": "We are Bilal Al-Junaid for Trade and Import, specializing in providing integrated diesel solutions. We offer a comprehensive range of diesel generator and engine spare parts with the ability to customize according to demand for global brands. We focus on ensuring our customers' needs are met with the highest quality, contributing to increased operational efficiency and reduced downtime."
+    "ar": "يعتبر بلال الجنيد للتجارة والاستيراد واحد من أبرز المستوردين في مجال الاستيراد، حيث نجح في تحقيق مكانة مرموقة في السوق بفضل التزامه بالجودة والابتكار. نحن نؤمن بأهمية تقديم خدمات استيراد متميزة تلبي احتياجات عملائنا المتنوعة، ونسعى جاهدين لتحقيق رضاهم من خلال توفير منتجات موثوقة ومتميزة.",
+    "en": "Bilal Al-Junaid Trading & Import is considered one of the leading importers in the region, achieving a prestigious position in the market thanks to its commitment to quality and innovation. We believe in providing distinguished import services that meet the diverse needs of our clients."
+  },
+  "establishment": {
+    "ar": "تأسس بلال الجنيد للتجارة والاستيراد في عام 2007، مع رؤية واضحة تتمثل في تقديم خدمات استيراد متميزة. نحن نؤمن بأن رضا العملاء هو المحرك الأساسي لنجاحنا، ونعتمد في عملنا على مبادئ الجودة والنزاهة والاحترافية. منذ انطلاقنا، سعينا لبناء سمعة قوية في السوق من خلال تقديم منتجات موثوقة تلبي احتياجات عملائنا.",
+    "en": "Established in 2007, Bilal Al-Junaid Trading & Import began with a clear vision to deliver outstanding import services. We believe client satisfaction is the primary driver of our success, relying on quality, integrity, and professionalism."
   },
   "vision": {
-    "ar": "أن نكون الشريك المثالي للنجاح في الاستيراد",
-    "en": "To be the ideal partner for success in import"
+    "ar": "أن نكون الرائدون في مجال استيراد قطع الغيار ومعدات الديزل على مستوى المنطقة، مع الالتزام بتقديم أعلى مستويات الجودة والخدمة. كما نطمح إلى تعزيز الابتكار المستدام من خلال استكشاف تقنيات جديدة وتطوير حلول تلبي احتياجات السوق المتغيرة.",
+    "en": "To be the leaders in importing diesel equipment and spare parts regionally, committed to delivering the highest levels of quality and service while fostering sustainable innovation."
   },
-  "mission": {
-    "ar": "تلبية احتياجات العملاء بأعلى جودة مع ضمان سرعة التسليم",
-    "en": "Meeting customer needs with the highest quality while ensuring fast delivery"
+  "message": {
+    "ar": "باختيارك بلال الجنيد للتجارة والاستيراد أنت تختار شريكاً يركز على تحقيق نتائج ملموسة تعزز من نجاحك وتساعدك في الوصول إلى أهدافك بكفاءة وفعالية.",
+    "en": "By choosing Bilal Al-Junaid Trading & Import, you choose a partner focused on delivering tangible results that enhance your success and help you reach your goals efficiently."
+  },
+  "goals": {
+    "ar": [
+      { "title": "توفير أعلى جودة", "desc": "تقديم قطع غيار ومعدات تلبي أعلى معايير الجودة العالمية." },
+      { "title": "رضا العملاء", "desc": "تحقيق مستويات عالية من رضا العملاء من خلال خدمات سريعة وموثوقة." },
+      { "title": "التوسع", "desc": "توسيع نطاق خدماتنا ومنتجاتنا لتلبية احتياجات السوق المتزايدة." }
+    ],
+    "en": [
+      { "title": "Provide Highest Quality", "desc": "Delivering spare parts and equipment meeting top international quality standards." },
+      { "title": "Customer Satisfaction", "desc": "Achieving high levels of client satisfaction through fast and reliable services." },
+      { "title": "Expansion", "desc": "Expanding our range of products and services to meet growing market demands." }
+    ]
   },
   "values": {
-    "ar": ["الجودة", "الثقة", "الالتزام", "الإتقان", "سرعة التسليم"],
-    "en": ["Quality", "Trust", "Commitment", "Excellence", "Fast Delivery"]
+    "ar": [
+      { "title": "الابتكار والتنوع", "desc": "نسعى لتقديم حلول جديدة ومبتكرة من خلال تشكيلة واسعة من قطع الغيار والزيوت والفلاتر." },
+      { "title": "سرعة التوصيل والدعم", "desc": "نضمن سرعة تقديم الطلبات مع توفير استشارات فنية ودعم مستمر." },
+      { "title": "النزاهة والشفافية", "desc": "نعمل بشفافية ونلتزم بأخلاقيات العمل، مما يعزز ثقة العملاء بنا." },
+      { "title": "الجودة والاحترافية", "desc": "نؤمن بأن الجودة هي أساس النجاح، ونلتزم بأعلى معايير الأداء والتميز في كل ما نقدمه." }
+    ],
+    "en": [
+      { "title": "Innovation & Variety", "desc": "Striving to offer new innovative solutions through a wide range of parts, oils, and filters." },
+      { "title": "Fast Delivery & Support", "desc": "Ensuring swift order processing along with technical consultations and support." },
+      { "title": "Integrity & Transparency", "desc": "Operating transparently and adhering to business ethics to foster trust." },
+      { "title": "Quality & Professionalism", "desc": "Believing quality is the foundation of success, committed to top standards of excellence." }
+    ]
+  },
+  "whyUs": {
+    "ar": [
+      { "title": "سرعة التسليم", "desc": "نضمن لك تسليم الطلبات في أسرع وقت ممكن، مما يقلل من فترات التوقف." },
+      { "title": "زيادة الكفاءة", "desc": "منتجاتنا تعزز من أداء المعدات، مما يؤدي إلى تقليل الأعطال ورفع الإنتاجية." },
+      { "title": "توفير التكاليف", "desc": "منتجاتنا ذات الأسعار التنافسية تساعدك على تقليل النفقات." },
+      { "title": "علاقات موثوقة", "desc": "نبني علاقات طويلة الأمد مع عملائنا، مما يضمن لك شراكة ناجحة ومستدامة." },
+      { "title": "دعم فني مستمر", "desc": "فريقنا متاح دائماً لتقديم الاستشارات والدعم الفني." }
+    ],
+    "en": [
+      { "title": "Fast Delivery", "desc": "We guarantee order delivery in the shortest time possible, reducing downtime." },
+      { "title": "Increased Efficiency", "desc": "Our products enhance equipment performance, reducing breakdowns and boosting productivity." },
+      { "title": "Cost Savings", "desc": "Our competitively priced products help you reduce operational expenses." },
+      { "title": "Trusted Relationships", "desc": "We build long-term relationships with clients, ensuring a successful and sustainable partnership." },
+      { "title": "Continuous Technical Support", "desc": "Our dedicated team is always available to provide consultation and technical support." }
+    ]
   },
   "stats": {
-    "yearsExperience": 15,
+    "yearsExperience": 18,
     "clients": 500,
     "products": 2000,
     "brands": 20
@@ -40,6 +86,7 @@
     "landline": "01324523",
     "whatsapp": "967779924444",
     "email": "bilalaljunaid3@gmail.com",
+    "adminEmail": "belal25aljunaid@gmail.com",
     "address": {
       "ar": "اليمن - صنعاء - شارع عمران - جوار سوق غثيم",
       "en": "Yemen - Sana'a - Imran Street - Next to Ghathim Market"
@@ -52,10 +99,10 @@
   "social": {
     "whatsapp": "https://wa.me/967779924444",
     "telegram": "https://t.me/bilalaljunaid",
-    "facebook": "https://facebook.com/bilalaljunaid"
+    "facebook": "https://www.facebook.com/share/p/1DZgcLuCb5/"
   },
   "footerMessage": {
-    "ar": "نعتز بفرصة العمل معكم ونتطلع إلى إسهاماتكم القيمة",
-    "en": "We are proud to work with you and look forward to your valuable contributions"
+    "ar": "اختيارك المثالي لشريك النجاح في الاستيراد",
+    "en": "Your ideal choice for a successful partner in import"
   }
 }

@@ -57,8 +57,8 @@ export function Footer() {
           {/* Company Info */}
           <div className="flex flex-col gap-6 lg:col-span-1">
             <Logo />
-            <p className="text-sm text-text-secondary leading-relaxed max-w-xs">
-              {companyData.slogan[locale]}
+            <p className="text-sm text-text-secondary leading-relaxed max-w-xs font-medium">
+              {companyData.footerSlogan[locale]}
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-3">

@@ -2,61 +2,36 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
-import { useTheme } from 'next-themes';
+import { useLocale } from 'next-intl';
 import { cn } from '@/lib/utils';
-import { useEffect, useState } from 'react';
 
 export interface LogoProps {
   className?: string;
   variant?: 'light' | 'dark';
 }
 
-export function Logo({ className, variant }: LogoProps) {
+export function Logo({ className }: LogoProps) {
   const locale = useLocale();
-  const t = useTranslations('logo');
-  const { theme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // تحديد الخلفية حسب الوضع
-  const getBgColor = () => {
-    if (!mounted) return 'bg-white';
-    const currentTheme = variant || resolvedTheme || theme || 'light';
-    return currentTheme === 'dark' ? 'bg-[#0B1120]' : 'bg-white';
-  };
-
-  // تحديد لون الإطار حسب الوضع
-  const getBorderColor = () => {
-    if (!mounted) return 'border-gray-200';
-    const currentTheme = variant || resolvedTheme || theme || 'light';
-    return currentTheme === 'dark' ? 'border-[#1E293B]' : 'border-gray-200';
-  };
+  const isArabic = locale === 'ar';
 
   return (
     <Link href={`/${locale}`} className={cn('flex items-center gap-3', className)}>
-      <div className={cn(
-        'relative w-12 h-12 flex-shrink-0 rounded-xl p-1.5 border transition-all duration-300 shadow-sm hover:shadow-md overflow-hidden',
-        getBgColor(),
-        getBorderColor()
-      )}>
+      <div className="relative w-12 h-12 flex-shrink-0 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
         <Image
-          src="/images/logo/logo.jpg"
-          alt={`${t('name')} ${t('subtitle')}`}
+          src="/images/logo/2.jpg"
+          alt={isArabic ? 'بلال الجنيد للتجارة والاستيراد' : 'Bilal Al-Junaid Trading & Import'}
           fill
-          className="object-contain"
+          className="object-cover"
           priority
+          sizes="48px"
         />
       </div>
       <div className="flex flex-col leading-tight">
         <span className="text-lg font-bold text-text">
-          {t('name')}
+          {isArabic ? 'بلال الجنيد' : 'Bilal Al-Junaid'}
         </span>
         <span className="text-xs text-text-muted -mt-0.5">
-          {t('subtitle')}
+          {isArabic ? 'للتجارة والاستيراد' : 'Trading & Import'}
         </span>
       </div>
     </Link>
@@ -64,3 +39,4 @@ export function Logo({ className, variant }: LogoProps) {
 }
 
 export default Logo;
+

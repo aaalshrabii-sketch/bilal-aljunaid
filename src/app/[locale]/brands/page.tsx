@@ -26,7 +26,7 @@ export default async function BrandsPage({ params }: { params: Promise<{ locale:
     {
       name: "Caterpillar",
       description: isArabic ? "الشركة الرائدة في مجال المعدات الثقيلة والمولدات." : "The leading company in heavy equipment and generators.",
-      url: "https://www.cat.com",
+      url: "https://www.caterpillar.com",
       image: "https://upload.wikimedia.org/wikipedia/commons/8/84/Caterpillar_logo.svg"
     },
     {
@@ -42,10 +42,28 @@ export default async function BrandsPage({ params }: { params: Promise<{ locale:
       image: "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cummins_logo.svg"
     },
     {
+      name: "Volvo Penta",
+      description: isArabic ? "محركات وحلول طاقة بحرية وصناعية عالية الجودة." : "High-quality marine and industrial engines and power solutions.",
+      url: "https://www.volvopenta.com",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Volvo_Logo.svg/2560px-Volvo_Logo.svg.png"
+    },
+    {
+      name: "John Deere",
+      description: isArabic ? "معدات زراعية وصناعية ومحركات ديزل موثوقة." : "Reliable agricultural and industrial equipment and diesel engines.",
+      url: "https://www.deere.com",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/John_Deere_logo.svg/2560px-John_Deere_logo.svg.png"
+    },
+    {
       name: "Fleetguard",
       description: isArabic ? "أنظمة الفلترة المتطورة للمحركات الشاقة." : "Advanced filtration systems for heavy duty engines.",
-      url: "https://www.cumminsfiltration.com",
+      url: "https://www.fleetguard.com",
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Fleetguard.svg/2560px-Fleetguard.svg.png"
+    },
+    {
+      name: "Donaldson",
+      description: isArabic ? "حلول الترشيح وإدارة الهواء للمعدات الصناعية." : "Filtration and air management solutions for industrial equipment.",
+      url: "https://www.donaldson.com",
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Donaldson_Company_logo.svg/2560px-Donaldson_Company_logo.svg.png"
     }
   ];
 

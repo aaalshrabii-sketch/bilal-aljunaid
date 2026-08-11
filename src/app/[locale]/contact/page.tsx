@@ -90,6 +90,13 @@ export default function ContactPage() {
       href: `mailto:${companyData.contact.email}`,
     },
     {
+      icon: <Mail className="w-5 h-5 text-accent" />,
+      label: t('adminEmail'),
+      value: companyData.contact.adminEmail,
+      href: `mailto:${companyData.contact.adminEmail}`,
+      sub: t('adminEmailNote'),
+    },
+    {
       icon: <Clock className="w-5 h-5" />,
       label: isArabic ? 'ساعات العمل' : 'Working Hours',
       value: companyData.contact.workingHours[isArabic ? 'ar' : 'en'],

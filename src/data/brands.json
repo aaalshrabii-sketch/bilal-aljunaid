@@ -1,38 +1,65 @@
 [
   {
     "id": "b-001",
-    "name": { "ar": "قطع الغيار", "en": "Spare Parts" },
-    "description": {
-      "ar": "تشكيلة واسعة من قطع غيار المولدات والمحركات الديزل للماركات العالمية",
-      "en": "A wide range of diesel generator and engine spare parts for global brands"
-    },
-    "icon": "Settings"
+    "name": "Caterpillar",
+    "nameEn": "Caterpillar",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Caterpillar_logo.svg",
+    "description": "الشركة الرائدة في مجال المعدات الثقيلة والمولدات.",
+    "descriptionEn": "The leading company in heavy equipment and generators.",
+    "website": "https://www.caterpillar.com"
   },
   {
     "id": "b-002",
-    "name": { "ar": "زيوت المحركات", "en": "Motor Oils" },
-    "description": {
-      "ar": "زيوت محركات الديزل والبترول والهيدروليك عالية الجودة",
-      "en": "High-quality diesel, petroleum, and hydraulic engine oils"
-    },
-    "icon": "Droplets"
+    "name": "Perkins",
+    "nameEn": "Perkins",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Perkins_Engines_logo.svg/1200px-Perkins_Engines_logo.svg.png",
+    "description": "محركات الديزل ذات الموثوقية العالية والأداء القوي.",
+    "descriptionEn": "Diesel engines with high reliability and strong performance.",
+    "website": "https://www.perkins.com"
   },
   {
     "id": "b-003",
-    "name": { "ar": "الفلاتر", "en": "Filters" },
-    "description": {
-      "ar": "فلاتر عالية الجودة لمحركات الديزل لضمان أعلى كفاءة",
-      "en": "High-quality filters for diesel engines to ensure maximum efficiency"
-    },
-    "icon": "Filter"
+    "name": "Cummins",
+    "nameEn": "Cummins",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cummins_logo.svg",
+    "description": "حلول الطاقة المتطورة التي تدعم استمرار الأعمال.",
+    "descriptionEn": "Advanced power solutions that support business continuity.",
+    "website": "https://www.cummins.com"
   },
   {
     "id": "b-004",
-    "name": { "ar": "كمبريشنات الهواء", "en": "Air Compressors" },
-    "description": {
-      "ar": "كمبريشنات هواء متطورة للمعدات الصناعية والمولدات",
-      "en": "Advanced air compressors for industrial equipment and generators"
-    },
-    "icon": "Wind"
+    "name": "Volvo Penta",
+    "nameEn": "Volvo Penta",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Volvo_Logo.svg/2560px-Volvo_Logo.svg.png",
+    "description": "محركات وحلول طاقة بحرية وصناعية عالية الجودة.",
+    "descriptionEn": "High-quality marine and industrial engines and power solutions.",
+    "website": "https://www.volvopenta.com"
+  },
+  {
+    "id": "b-005",
+    "name": "John Deere",
+    "nameEn": "John Deere",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/John_Deere_logo.svg/2560px-John_Deere_logo.svg.png",
+    "description": "معدات زراعية وصناعية ومحركات ديزل موثوقة.",
+    "descriptionEn": "Reliable agricultural and industrial equipment and diesel engines.",
+    "website": "https://www.deere.com"
+  },
+  {
+    "id": "b-006",
+    "name": "Fleetguard",
+    "nameEn": "Fleetguard",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Fleetguard.svg/2560px-Fleetguard.svg.png",
+    "description": "أنظمة الفلترة المتطورة للمحركات الشاقة.",
+    "descriptionEn": "Advanced filtration systems for heavy-duty engines.",
+    "website": "https://www.fleetguard.com"
+  },
+  {
+    "id": "b-007",
+    "name": "Donaldson",
+    "nameEn": "Donaldson",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Donaldson_Company_logo.svg/2560px-Donaldson_Company_logo.svg.png",
+    "description": "حلول الترشيح وإدارة الهواء للمعدات الصناعية.",
+    "descriptionEn": "Filtration and air management solutions for industrial equipment.",
+    "website": "https://www.donaldson.com"
   }
 ]
