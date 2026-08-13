@@ -6,6 +6,8 @@ import { AboutStats } from './AboutStats';
 import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 
+import Link from 'next/link';
+
 export function About() {
   const locale = useLocale();
   const isArabic = locale === 'ar';
@@ -39,9 +41,11 @@ export function About() {
             <p className="text-lg text-text-secondary leading-relaxed mb-8">
               {description}
             </p>
-            <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
-              {isArabic ? "اعرف أكثر" : "Learn More"}
-            </Button>
+            <Link href={`/${locale}/about`}>
+              <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
+                {isArabic ? "اعرف أكثر" : "Learn More"}
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div

@@ -30,7 +30,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
         {duplicatedBrands.map((brand, index) => (
           <div 
             key={index} 
-            className="text-2xl md:text-3xl font-bold text-text-secondary/50 dark:text-text-secondary/30 whitespace-nowrap hover:text-accent transition-colors duration-300"
+            className="text-2xl md:text-3xl font-extrabold text-text-secondary whitespace-nowrap hover:text-accent transition-colors duration-300 select-none cursor-default"
           >
             {brand}
           </div>

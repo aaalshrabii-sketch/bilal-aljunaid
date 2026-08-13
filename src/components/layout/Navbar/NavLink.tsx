@@ -9,9 +9,10 @@ interface NavLinkProps {
   locale: string;
   children: React.ReactNode;
   onClick?: () => void;
+  isTransparent?: boolean;
 }
 
-export function NavLink({ href, locale, children, onClick }: NavLinkProps) {
+export function NavLink({ href, locale, children, onClick, isTransparent = false }: NavLinkProps) {
   const pathname = usePathname();
   const targetPath = href === '/' ? `/${locale}` : (href.startsWith(`/${locale}`) ? href : `/${locale}${href}`);
   const isActive = pathname === targetPath;
@@ -20,9 +21,15 @@ export function NavLink({ href, locale, children, onClick }: NavLinkProps) {
     <Link
       href={targetPath}
       onClick={onClick}
+      prefetch={true}
+      scroll={false}
       className={cn(
-        'relative font-medium text-sm transition-colors hover:text-accent py-2',
-        isActive ? 'text-accent font-semibold' : 'text-text'
+        'relative font-medium text-sm transition-colors py-2',
+        isActive
+          ? 'text-accent font-semibold'
+          : isTransparent
+          ? 'text-white/90 hover:text-accent'
+          : 'text-text-secondary hover:text-accent'
       )}
     >
       {children}

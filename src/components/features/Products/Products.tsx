@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/Button';
 import productsData from '@/data/products.json';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import Link from 'next/link';
+
 export function Products() {
   const locale = useLocale();
   const isArabic = locale === 'ar';
@@ -73,9 +75,11 @@ export function Products() {
         </motion.div>
 
         <div className="text-center">
-          <Button size="lg" className="px-12 bg-primary hover:bg-primary-light">
-            {buttonText}
-          </Button>
+          <Link href={`/${locale}/products`}>
+            <Button size="lg" className="px-12 bg-primary hover:bg-primary-light">
+              {buttonText}
+            </Button>
+          </Link>
         </div>
       </Container>
     </section>

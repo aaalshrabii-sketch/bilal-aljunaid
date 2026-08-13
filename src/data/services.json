@@ -30,12 +30,12 @@
     "icon": "Filter",
     "name": { "ar": "فلاتر", "en": "Filters" },
     "description": {
-      "ar": "مجموعة متكاملة من فلاتر الزيت، الهواء، والوقود للحفاظ على نقاء الأجزاء الداخلية ومنع تسلل الشوائب التي قد تعيق كفاءة عمل المعدات.",
-      "en": "An integrated range of oil, air, and fuel filters to maintain the purity of internal parts and prevent impurities that may hinder equipment efficiency."
+      "ar": "مجموعة متكاملة من فلاتر الديزل، البترول، الهيدروليك، الهواء، والزيت، المصممة للحفاظ على نقاء الأجزاء الداخلية ومنع تسلل الشوائب التي قد تعيق كفاءة عمل معداتك.",
+      "en": "A comprehensive range of diesel, petrol, hydraulic, air, and oil filters designed to maintain the purity of internal parts and prevent impurities that may hinder equipment efficiency."
     },
     "features": {
-      "ar": ["فلاتر هواء", "فلاتر زيت", "فلاتر ديزل/وقود"],
-      "en": ["Air filters", "Oil filters", "Diesel/Fuel filters"]
+      "ar": ["فلاتر ديزل ووقود", "فلاتر هواء", "فلاتر زيت", "فلاتر هيدروليك"],
+      "en": ["Diesel & Fuel Filters", "Air Filters", "Oil Filters", "Hydraulic Filters"]
     }
   },
   {

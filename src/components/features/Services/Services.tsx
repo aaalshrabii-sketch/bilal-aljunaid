@@ -6,6 +6,8 @@ import { ServiceCard } from './ServiceCard';
 import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 
+import Link from 'next/link';
+
 export function Services() {
   const locale = useLocale();
   const isArabic = locale === 'ar';
@@ -62,7 +64,9 @@ export function Services() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <Button variant="outline">{buttonText}</Button>
+            <Link href={`/${locale}/services`}>
+              <Button variant="outline">{buttonText}</Button>
+            </Link>
           </motion.div>
         </div>
 

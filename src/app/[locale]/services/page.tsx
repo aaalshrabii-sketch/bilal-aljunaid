@@ -49,11 +49,11 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       icon: "Filter",
       title: isArabic ? "فلاتر متنوعة وعالية الجودة" : "Various High-Quality Filters",
       description: isArabic
-        ? "مجموعة متكاملة من فلاتر الزيت، الهواء، والوقود للحفاظ على نقاء الأجزاء الداخلية ومنع تسلل الشوائب التي قد تعيق كفاءة عمل المعدات."
-        : "A complete range of oil, air, and fuel filters to maintain the purity of internal parts and prevent impurities that may hinder equipment efficiency.",
+        ? "مجموعة متكاملة من فلاتر الديزل، البترول، الهيدروليك، الهواء، والزيت، المصممة للحفاظ على نقاء الأجزاء الداخلية ومنع تسلل الشوائب التي قد تعيق كفاءة عمل معداتك."
+        : "A comprehensive range of diesel, petrol, hydraulic, air, and oil filters designed to maintain the purity of internal parts and prevent impurities that may hinder equipment efficiency.",
       features: isArabic
-        ? ["فلاتر هواء", "فلاتر زيت", "فلاتر ديزل/وقود"]
-        : ["Air Filters", "Oil Filters", "Diesel/Fuel Filters"]
+        ? ["فلاتر ديزل ووقود", "فلاتر هواء", "فلاتر زيت", "فلاتر هيدروليك"]
+        : ["Diesel & Fuel Filters", "Air Filters", "Oil Filters", "Hydraulic Filters"]
     },
     {
       icon: "Wrench",

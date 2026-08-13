@@ -32,7 +32,7 @@ export default async function LocaleLayout({
       <SchemaMarkup />
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow pt-20">
+        <main className="flex-1">
           {children}
         </main>
         <Footer />

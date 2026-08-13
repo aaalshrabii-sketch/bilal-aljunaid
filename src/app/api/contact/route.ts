@@ -1,109 +1,84 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { z } from 'zod';
+import { NextResponse } from 'next/server';
 
-// ✅ Server-side Validation Schema
-const contactSchema = z.object({
-  name: z.string().min(2, 'الاسم مطلوب').max(100, 'الاسم طويل جداً'),
-  email: z.string().email('بريد إلكتروني غير صحيح').max(254),
-  phone: z.string().min(9, 'رقم الجوال مطلوب').max(15, 'رقم الجوال طويل جداً'),
-  subject: z.string().min(1, 'الموضوع مطلوب').max(200),
-  message: z.string().min(10, 'الرسالة قصيرة جداً').max(1000, 'الرسالة طويلة جداً'),
-});
-
-// ✅ Rate Limiting - تخزين في الذاكرة (بسيط وفعّال للمشاريع الصغيرة)
-const rateLimit = new Map<string, { count: number; timestamp: number }>();
-const WINDOW_MS = 60 * 1000; // دقيقة واحدة
-const MAX_REQUESTS = 5; // 5 رسائل كحد أقصى في الدقيقة
-
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now();
-
-  // تنظيف السجلات المنتهية الصلاحية
-  for (const [key, value] of rateLimit) {
-    if (now - value.timestamp > WINDOW_MS) {
-      rateLimit.delete(key);
-    }
-  }
-
-  const record = rateLimit.get(ip);
-  if (record) {
-    if (record.count >= MAX_REQUESTS) {
-      return false; // تجاوز الحد
-    }
-    record.count++;
-  } else {
-    rateLimit.set(ip, { count: 1, timestamp: now });
-  }
-
-  return true; // مسموح
-}
-
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   try {
-    // 1. ✅ Rate Limiting
-    const ip =
-      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-      request.headers.get('x-real-ip') ||
-      'unknown';
-
-    if (!checkRateLimit(ip)) {
-      return NextResponse.json(
-        { error: 'لقد أرسلت العديد من الرسائل، يرجى المحاولة بعد دقيقة' },
-        { status: 429, headers: { 'Retry-After': '60' } }
-      );
-    }
-
-    // 2. ✅ التحقق من Content-Type
-    const contentType = request.headers.get('content-type') || '';
-    if (!contentType.includes('application/json')) {
-      return NextResponse.json(
-        { error: 'نوع المحتوى غير صحيح' },
-        { status: 415 }
-      );
-    }
-
-    // 3. ✅ قراءة البيانات
-    let body: unknown;
+    // 1. قراءة البيانات من الطلب
+    let body: any;
     try {
       body = await request.json();
     } catch {
       return NextResponse.json(
-        { error: 'بيانات JSON غير صحيحة' },
+        { error: 'تنسيق البيانات غير صحيح (JSON Invalid)' },
         { status: 400 }
       );
     }
 
-    // 4. ✅ Server-side Validation باستخدام Zod
-    const validatedResult = contactSchema.safeParse(body);
-    if (!validatedResult.success) {
+    const { name, phone, email, subject, title, message } = body;
+    const finalSubject = subject || title || 'رسالة جديدة من الموقع';
+
+    // 2. التحقق من الحقول الأساسية
+    if (!name || !email || !message) {
       return NextResponse.json(
-        { error: 'بيانات غير صحيحة', details: validatedResult.error.issues },
+        { error: 'الرجاء ملء جميع الحقول المطلوبة (الاسم، البريد، والرسالة)' },
         { status: 400 }
       );
     }
 
-    // 5. ✅ Sanitization - تنظيف البيانات من محتوى خبيث
-    const sanitizedData = {
-      name: validatedResult.data.name.replace(/[<>"']/g, '').trim(),
-      email: validatedResult.data.email.toLowerCase().trim(),
-      phone: validatedResult.data.phone.replace(/[^0-9+\-\s]/g, '').trim(),
-      subject: validatedResult.data.subject.replace(/[<>"']/g, '').trim(),
-      message: validatedResult.data.message.replace(/[<>"']/g, '').trim(),
+    // 3. قراءة المفاتيح البيئية من الخادم
+    const serviceId = process.env.EMAILJS_SERVICE_ID || 'service_nhdkgwk';
+    const templateId = process.env.EMAILJS_TEMPLATE_ID || 'template_jji3wkk';
+    const publicKey = process.env.EMAILJS_PUBLIC_KEY || 'zFKyKdILC6tzB2aSR';
+    const privateKey = process.env.EMAILJS_PRIVATE_KEY || 'qccrZKZthASxh1WgiLU1u';
+    const receiverEmail = process.env.RECEIVER_EMAIL || 'belal25aljunaid@gmail.com';
+
+    // 4. إعداد بيانات الإرسال لـ EmailJS مع دعم Strict Mode (Private Key)
+    const emailjsData: Record<string, any> = {
+      service_id: serviceId,
+      template_id: templateId,
+      user_id: publicKey || privateKey,
+      accessToken: privateKey,
+      template_params: {
+        name: name,
+        from_name: name,
+        phone: phone || '',
+        email: email,
+        from_email: email,
+        subject: finalSubject,
+        title: finalSubject,
+        message: message,
+        to_email: receiverEmail,
+      },
     };
 
-    // ✅ لا console.log هنا - لا تسريب لبيانات المستخدم
-    // هنا يمكن إرسال بريد إلكتروني عبر مزود SMTP آمن
-    // مثال: await sendEmail(sanitizedData);
-    void sanitizedData; // إسكات تحذير TypeScript مؤقتاً
+    // 5. إرسال الطلب عبر REST API إلى EmailJS
+    const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(emailjsData),
+    });
 
+    // 6. التحقق من الاستجابة ومعالجة الأخطاء
+    if (!response.ok) {
+      const errorData = await response.text();
+      console.error('EmailJS Error Response:', response.status, errorData);
+
+      return NextResponse.json(
+        { error: `فشل إرسال البريد: ${errorData || response.statusText}` },
+        { status: response.status }
+      );
+    }
+
+    // 7. إرجاع استجابة النجاح
     return NextResponse.json(
-      { message: 'تم إرسال الرسالة بنجاح ✅' },
+      { message: 'تم إرسال الرسالة بنجاح! ✅' },
       { status: 200 }
     );
-  } catch {
-    // ✅ لا نكشف تفاصيل الخطأ الداخلية للمستخدم
+  } catch (error: any) {
+    console.error('Server Error in /api/contact:', error);
     return NextResponse.json(
-      { error: 'حدث خطأ في الخادم، يرجى المحاولة لاحقاً' },
+      { error: 'حدث خطأ داخلي في الخادم عند إرسال البريد' },
       { status: 500 }
     );
   }

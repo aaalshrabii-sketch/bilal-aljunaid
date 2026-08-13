@@ -4,7 +4,11 @@ import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 
-export function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  isTransparent?: boolean;
+}
+
+export function LanguageSwitcher({ isTransparent = false }: LanguageSwitcherProps) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -26,7 +30,11 @@ export function LanguageSwitcher() {
     <Button
       variant="outline"
       size="sm"
-      className="font-medium min-w-[80px]"
+      className={`font-medium min-w-[80px] ${
+        isTransparent
+          ? 'border-white/40 text-white hover:bg-white/10 hover:text-white hover:border-white'
+          : ''
+      }`}
       onClick={toggleLocale}
     >
       {locale === 'ar' ? 'English' : 'العربية'}

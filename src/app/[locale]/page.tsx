@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect } from 'react';
 import { Hero } from '@/components/features/Hero';
 import { About } from '@/components/features/About';
 import { Services } from '@/components/features/Services';
@@ -6,6 +9,10 @@ import { Brands } from '@/components/features/Brands';
 import { WhyUs } from '@/components/features/WhyUs';
 
 export default function HomePage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+  }, []);
+
   return (
     <>
       <Hero />

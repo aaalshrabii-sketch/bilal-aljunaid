@@ -1,65 +1,200 @@
 [
   {
-    "id": "b-001",
-    "name": "Caterpillar",
-    "nameEn": "Caterpillar",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/84/Caterpillar_logo.svg",
-    "description": "الشركة الرائدة في مجال المعدات الثقيلة والمولدات.",
-    "descriptionEn": "The leading company in heavy equipment and generators.",
-    "website": "https://www.caterpillar.com"
-  },
-  {
-    "id": "b-002",
+    "id": "perkins",
     "name": "Perkins",
-    "nameEn": "Perkins",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Perkins_Engines_logo.svg/1200px-Perkins_Engines_logo.svg.png",
-    "description": "محركات الديزل ذات الموثوقية العالية والأداء القوي.",
-    "descriptionEn": "Diesel engines with high reliability and strong performance.",
-    "website": "https://www.perkins.com"
+    "category": "spare_parts",
+    "logo": "/images/brands/perkins.png"
   },
   {
-    "id": "b-003",
-    "name": "Cummins",
-    "nameEn": "Cummins",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cummins_logo.svg",
-    "description": "حلول الطاقة المتطورة التي تدعم استمرار الأعمال.",
-    "descriptionEn": "Advanced power solutions that support business continuity.",
-    "website": "https://www.cummins.com"
+    "id": "volvo",
+    "name": "Volvo",
+    "category": "spare_parts",
+    "logo": "/images/brands/volvo.png"
   },
   {
-    "id": "b-004",
-    "name": "Volvo Penta",
-    "nameEn": "Volvo Penta",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Volvo_Logo.svg/2560px-Volvo_Logo.svg.png",
-    "description": "محركات وحلول طاقة بحرية وصناعية عالية الجودة.",
-    "descriptionEn": "High-quality marine and industrial engines and power solutions.",
-    "website": "https://www.volvopenta.com"
+    "id": "cat",
+    "name": "CAT",
+    "category": "spare_parts",
+    "logo": "/images/brands/cat.png"
   },
   {
-    "id": "b-005",
+    "id": "mtu",
+    "name": "MTU",
+    "category": "spare_parts",
+    "logo": "/images/brands/mtu.png"
+  },
+  {
+    "id": "man",
+    "name": "MAN",
+    "category": "spare_parts",
+    "logo": "/images/brands/man.png"
+  },
+  {
+    "id": "john-deere",
     "name": "John Deere",
-    "nameEn": "John Deere",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/John_Deere_logo.svg/2560px-John_Deere_logo.svg.png",
-    "description": "معدات زراعية وصناعية ومحركات ديزل موثوقة.",
-    "descriptionEn": "Reliable agricultural and industrial equipment and diesel engines.",
-    "website": "https://www.deere.com"
+    "category": "spare_parts",
+    "logo": "/images/brands/john-deere.png"
   },
   {
-    "id": "b-006",
+    "id": "deutz",
+    "name": "DEUTZ",
+    "category": "spare_parts",
+    "logo": "/images/brands/deutz.png"
+  },
+  {
+    "id": "doosan",
+    "name": "DOOSAN",
+    "category": "spare_parts",
+    "logo": "/images/brands/doosan.png"
+  },
+  {
+    "id": "iveco",
+    "name": "IVECO",
+    "category": "spare_parts",
+    "logo": "/images/brands/iveco.png"
+  },
+  {
+    "id": "kubota",
+    "name": "KUBOTA",
+    "category": "spare_parts",
+    "logo": "/images/brands/kubota.png"
+  },
+  {
+    "id": "mahle",
+    "name": "MAHLE",
+    "category": "spare_parts",
+    "logo": "/images/brands/mahle.png"
+  },
+  {
+    "id": "ucb",
+    "name": "UCB",
+    "category": "spare_parts",
+    "logo": "/images/brands/ucb.png"
+  },
+  {
+    "id": "bosch",
+    "name": "BOSCH",
+    "category": "spare_parts",
+    "logo": "/images/brands/bosch.png"
+  },
+  {
+    "id": "zf",
+    "name": "ZF",
+    "category": "spare_parts",
+    "logo": "/images/brands/zf.png"
+  },
+  {
+    "id": "skf",
+    "name": "SKF",
+    "category": "spare_parts",
+    "logo": "/images/brands/skf.png"
+  },
+  {
+    "id": "fag",
+    "name": "FAG",
+    "category": "spare_parts",
+    "logo": "/images/brands/fag.png"
+  },
+  {
+    "id": "goetze",
+    "name": "GOETZE",
+    "category": "spare_parts",
+    "logo": "/images/brands/goetze.png"
+  },
+  {
+    "id": "shell",
+    "name": "Shell",
+    "category": "oils",
+    "logo": "/images/brands/shell.png"
+  },
+  {
+    "id": "eni",
+    "name": "eni",
+    "category": "oils",
+    "logo": "/images/brands/eni.png"
+  },
+  {
+    "id": "castrol",
+    "name": "Castrol",
+    "category": "oils",
+    "logo": "/images/brands/castrol.png"
+  },
+  {
+    "id": "petromin",
+    "name": "PETROMIN",
+    "category": "oils",
+    "logo": "/images/brands/petromin.png"
+  },
+  {
+    "id": "fleetguard",
     "name": "Fleetguard",
-    "nameEn": "Fleetguard",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Fleetguard.svg/2560px-Fleetguard.svg.png",
-    "description": "أنظمة الفلترة المتطورة للمحركات الشاقة.",
-    "descriptionEn": "Advanced filtration systems for heavy-duty engines.",
-    "website": "https://www.fleetguard.com"
+    "category": "filters",
+    "logo": "/images/brands/fleetguard.png"
   },
   {
-    "id": "b-007",
-    "name": "Donaldson",
-    "nameEn": "Donaldson",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Donaldson_Company_logo.svg/2560px-Donaldson_Company_logo.svg.png",
-    "description": "حلول الترشيح وإدارة الهواء للمعدات الصناعية.",
-    "descriptionEn": "Filtration and air management solutions for industrial equipment.",
-    "website": "https://www.donaldson.com"
+    "id": "baldwin",
+    "name": "BALDWIN",
+    "category": "filters",
+    "logo": "/images/brands/baldwin.png"
+  },
+  {
+    "id": "wix",
+    "name": "WIX",
+    "category": "filters",
+    "logo": "/images/brands/wix.png"
+  },
+  {
+    "id": "mann-filter",
+    "name": "MANN FILTER",
+    "category": "filters",
+    "logo": "/images/brands/mann-filter.png"
+  },
+  {
+    "id": "hengst",
+    "name": "Hengst",
+    "category": "filters",
+    "logo": "/images/brands/hengst.png"
+  },
+  {
+    "id": "sampiyon",
+    "name": "Sampiyon",
+    "category": "filters",
+    "logo": "/images/brands/sampiyon.png"
+  },
+  {
+    "id": "atlas-copco",
+    "name": "Atlas Copco",
+    "category": "air-compressors",
+    "logo": "/images/brands/atlas-copco.png"
+  },
+  {
+    "id": "kaeser",
+    "name": "KAESER",
+    "category": "air-compressors",
+    "logo": "/images/brands/kaeser.png"
+  },
+  {
+    "id": "compair",
+    "name": "CompAir",
+    "category": "air-compressors",
+    "logo": "/images/brands/compair.png"
+  },
+  {
+    "id": "betico",
+    "name": "BETICO",
+    "category": "air-compressors",
+    "logo": "/images/brands/betico.png"
+  },
+  {
+    "id": "ingersoll-rand",
+    "name": "Ingersoll Rand",
+    "category": "air-compressors",
+    "logo": "/images/brands/ingersoll-rand.png"
+  },
+  {
+    "id": "sullair",
+    "name": "Sullair",
+    "category": "air-compressors",
+    "logo": "/images/brands/sullair.png"
   }
 ]

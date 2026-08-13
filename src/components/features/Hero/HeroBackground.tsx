@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Scene3D = dynamic(
   () => import('@/components/three/Scene3D/Scene3D'),
@@ -15,8 +14,6 @@ const DieselEngine = dynamic(
 );
 
 export function HeroBackground() {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 600], [0, 180]);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -31,11 +28,11 @@ export function HeroBackground() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
       <div className="absolute inset-0 bg-background" />
-      <motion.div 
+      <div
         className="absolute inset-0 opacity-20 dark:opacity-30 bg-cover bg-center"
-        style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000")',
-          y 
+        style={{
+          backgroundImage:
+            'url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000")',
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20" />

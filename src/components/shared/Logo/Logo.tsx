@@ -8,9 +8,10 @@ import { cn } from '@/lib/utils';
 export interface LogoProps {
   className?: string;
   variant?: 'light' | 'dark';
+  isTransparent?: boolean;
 }
 
-export function Logo({ className }: LogoProps) {
+export function Logo({ className, isTransparent = false }: LogoProps) {
   const locale = useLocale();
   const isArabic = locale === 'ar';
 
@@ -27,10 +28,20 @@ export function Logo({ className }: LogoProps) {
         />
       </div>
       <div className="flex flex-col leading-tight">
-        <span className="text-lg font-bold text-text">
+        <span
+          className={cn(
+            'text-xl font-bold transition-colors',
+            isTransparent ? 'text-white' : 'text-text'
+          )}
+        >
           {isArabic ? 'بلال الجنيد' : 'Bilal Al-Junaid'}
         </span>
-        <span className="text-xs text-text-muted -mt-0.5">
+        <span
+          className={cn(
+            'text-xs -mt-0.5 transition-colors',
+            isTransparent ? 'text-white/80' : 'text-text-secondary'
+          )}
+        >
           {isArabic ? 'للتجارة والاستيراد' : 'Trading & Import'}
         </span>
       </div>

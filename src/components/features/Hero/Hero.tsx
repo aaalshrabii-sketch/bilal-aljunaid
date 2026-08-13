@@ -9,9 +9,9 @@ export function Hero() {
   const locale = useLocale();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       <HeroBackground />
-      <Container className="relative z-10 py-20">
+      <Container className="relative z-10">
         <HeroContent locale={locale} />
       </Container>
     </section>

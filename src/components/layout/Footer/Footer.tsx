@@ -1,7 +1,6 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { Container } from '@/components/shared/Container/Container';
 import { Logo } from '@/components/shared/Logo/Logo';
 import { FooterLinks } from './FooterLinks';
@@ -68,7 +67,7 @@ export function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-text-secondary hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-text-secondary hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300 hover:scale-110"
                   aria-label={locale === 'ar' ? social.name : social.nameEn}
                 >
                   {getIcon(social.icon)}
@@ -95,19 +94,10 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-border/50 text-center">
           <p className="text-sm text-text-secondary">
             © {currentYear} {companyData.name[locale]}. {locale === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}
           </p>
-          <div className="flex items-center gap-4 text-sm text-text-secondary">
-            <Link href={`/${locale}/privacy`} className="hover:text-accent transition-colors">
-              {locale === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy'}
-            </Link>
-            <span>|</span>
-            <Link href={`/${locale}/terms`} className="hover:text-accent transition-colors">
-              {locale === 'ar' ? 'الشروط والأحكام' : 'Terms & Conditions'}
-            </Link>
-          </div>
         </div>
       </Container>
     </footer>

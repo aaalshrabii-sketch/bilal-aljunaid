@@ -1,80 +1,354 @@
 [
   {
-    "id": "1",
+    "id": "deutz-spare-parts",
     "name": {
-      "ar": "فلتر زيت محرك ديزل 4000",
-      "en": "Diesel Engine Oil Filter 4000"
+      "ar": "قطع غيار محركات DEUTZ",
+      "en": "DEUTZ Engine Spare Parts"
     },
+    "nameEn": "DEUTZ Engine Spare Parts",
     "description": {
-      "ar": "فلتر زيت عالي الجودة متوافق مع المولدات الصناعية",
-      "en": "High quality oil filter compatible with industrial generators"
+      "ar": "تشكيلة واسعة من قطع الغيار الأصلية والمطابقة لمحركات DEUTZ الألمانية، تشمل فلاتر، مضخات، وأجزاء تآكل.",
+      "en": "A wide range of original and compatible spare parts for German DEUTZ engines, including filters, pumps, and wear parts."
     },
-    "category": "filters",
-    "image": "/images/placeholder-product.jpg"
-  },
-  {
-    "id": "2",
-    "name": {
-      "ar": "زيت محركات ديزل 15W-40",
-      "en": "Diesel Engine Oil 15W-40"
-    },
-    "description": {
-      "ar": "زيت محركات ديزل فائق الأداء للخدمة الشاقة",
-      "en": "Premium heavy duty diesel engine oil"
-    },
-    "category": "oils",
-    "image": "/images/placeholder-product.jpg"
-  },
-  {
-    "id": "3",
-    "name": {
-      "ar": "مضخة وقود ديزل",
-      "en": "Diesel Fuel Pump"
-    },
-    "description": {
-      "ar": "مضخة وقود ذات كفاءة عالية لمحركات الديزل",
-      "en": "High efficiency fuel pump for diesel engines"
-    },
+    "descriptionEn": "A wide range of original and compatible spare parts for German DEUTZ engines, including filters, pumps, and wear parts.",
     "category": "spare_parts",
-    "image": "/images/placeholder-product.jpg"
+    "image": "/images/products/01_DEUTZ.jpg",
+    "inStock": true
   },
   {
-    "id": "4",
+    "id": "perkins-spare-parts",
     "name": {
-      "ar": "كمبريسور هواء 100 لتر",
-      "en": "Air Compressor 100L"
+      "ar": "قطع غيار محركات Perkins",
+      "en": "Perkins Engine Spare Parts"
     },
+    "nameEn": "Perkins Engine Spare Parts",
     "description": {
-      "ar": "كمبريسور هواء صناعي متين للاستخدام المستمر",
-      "en": "Durable industrial air compressor for continuous use"
+      "ar": "مجموعة متكاملة من قطع الغيار عالية الجودة لمحركات Perkins، تضمن الأداء المثالي وعمراً أطول للمحرك.",
+      "en": "A comprehensive set of high-quality spare parts for Perkins engines, ensuring optimal performance and longer engine life."
     },
+    "descriptionEn": "A comprehensive set of high-quality spare parts for Perkins engines, ensuring optimal performance and longer engine life.",
+    "category": "spare_parts",
+    "image": "/images/products/02_PerKins.jpg",
+    "inStock": true
+  },
+  {
+    "id": "volvo-penta-spare-parts",
+    "name": {
+      "ar": "قطع غيار فولفو بنتا",
+      "en": "Volvo Penta Spare Parts"
+    },
+    "nameEn": "Volvo Penta Spare Parts",
+    "description": {
+      "ar": "قطع غيار أصلية ومطابقة لمحركات فولفو بنتا البحرية والصناعية، تضمن الموثوقية والكفاءة.",
+      "en": "Original and compatible parts for Volvo Penta marine and industrial engines, ensuring reliability and efficiency."
+    },
+    "descriptionEn": "Original and compatible parts for Volvo Penta marine and industrial engines, ensuring reliability and efficiency.",
+    "category": "spare_parts",
+    "image": "/images/products/03_Volvo_Penta.jpg",
+    "inStock": true
+  },
+  {
+    "id": "cat-spare-parts",
+    "name": {
+      "ar": "قطع غيار كاتربيلر CAT",
+      "en": "CAT Caterpillar Spare Parts"
+    },
+    "nameEn": "CAT Caterpillar Spare Parts",
+    "description": {
+      "ar": "مجموعة فاخرة من قطع الغيار المعتمدة لآلات ومعدات CAT Caterpillar الثقيلة، مصنوعة لتحمل أقسى الظروف.",
+      "en": "A premium selection of certified spare parts for CAT Caterpillar heavy machinery and equipment, built to withstand the toughest conditions."
+    },
+    "descriptionEn": "A premium selection of certified spare parts for CAT Caterpillar heavy machinery and equipment, built to withstand the toughest conditions.",
+    "category": "spare_parts",
+    "image": "/images/products/04_CAT_Caterpillar.jpg",
+    "inStock": true
+  },
+  {
+    "id": "perkins-filters-set",
+    "name": {
+      "ar": "تشكيلة فلاتر بيركنز (Perkins)",
+      "en": "Perkins Filters Collection"
+    },
+    "nameEn": "Perkins Filters Collection",
+    "description": {
+      "ar": "مجموعة متنوعة من فلاتر الزيت والهواء والوقود الأصلية عالية الكفاءة مخصصة لمحركات Perkins.",
+      "en": "A high-efficiency original collection of oil, air, and fuel filters for Perkins engines."
+    },
+    "descriptionEn": "A high-efficiency original collection of oil, air, and fuel filters for Perkins engines.",
+    "category": "filters",
+    "image": "/images/products/filters/perkins-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "cat-filters-set",
+    "name": {
+      "ar": "طقم فلاتر كتربلر (CAT)",
+      "en": "Caterpillar (CAT) Filters Set"
+    },
+    "nameEn": "Caterpillar (CAT) Filters Set",
+    "description": {
+      "ar": "فلاتر تنقية متكاملة للمعدات الشاقة والمولدات الكبيرة لحماية المحرك من الأتربة والشوائب في الظروف القاسية.",
+      "en": "Comprehensive filtration set for heavy machinery and large generators protecting engines from impurities in extreme conditions."
+    },
+    "descriptionEn": "Comprehensive filtration set for heavy machinery and large generators protecting engines from impurities in extreme conditions.",
+    "category": "filters",
+    "image": "/images/products/filters/cat-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "john-deere-filters-set",
+    "name": {
+      "ar": "تشكيلة فلاتر جون دير (John Deere)",
+      "en": "John Deere Filters Collection"
+    },
+    "nameEn": "John Deere Filters Collection",
+    "description": {
+      "ar": "فلاتر زيت وهواء احترافية مصممة خصيصاً لمحركات ومولدات John Deere للحفاظ على ضغط زيت مستقر وهواء نقي.",
+      "en": "Professional oil and air filters engineered for John Deere engines ensuring stable oil pressure and clean air flow."
+    },
+    "descriptionEn": "Professional oil and air filters engineered for John Deere engines ensuring stable oil pressure and clean air flow.",
+    "category": "filters",
+    "image": "/images/products/filters/john-deere-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "kubota-filters-set",
+    "name": {
+      "ar": "مجموعة فلاتر كوبوتا (Kubota)",
+      "en": "Kubota Filters Set"
+    },
+    "nameEn": "Kubota Filters Set",
+    "description": {
+      "ar": "فلاتر ديزل وهواء عالية الدقة لمحركات Kubota تضمن ترشيح فائق الدقة وعمراً أطول للمحرك.",
+      "en": "High-precision fuel and air filters for Kubota engines delivering fine filtration and extended engine lifespan."
+    },
+    "descriptionEn": "High-precision fuel and air filters for Kubota engines delivering fine filtration and extended engine lifespan.",
+    "category": "filters",
+    "image": "/images/products/filters/kubota-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "deutz-filters-set",
+    "name": {
+      "ar": "طقم فلاتر ديوتز (Deutz)",
+      "en": "Deutz Engine Filters Collection"
+    },
+    "nameEn": "Deutz Engine Filters Collection",
+    "description": {
+      "ar": "فلاتر ألمانية متطورة مخصصة لمحركات Deutz لحماية البخاخات وطلمبة الديزل من رواسب الوقود.",
+      "en": "Advanced German filters tailored for Deutz engines protecting injectors and fuel pumps from fuel deposits."
+    },
+    "descriptionEn": "Advanced German filters tailored for Deutz engines protecting injectors and fuel pumps from fuel deposits.",
+    "category": "filters",
+    "image": "/images/products/filters/deutz-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "sampiyon-filters-set",
+    "name": {
+      "ar": "فلاتر شامبيون العالمية (Şampiyon)",
+      "en": "Sampiyon Filters Set"
+    },
+    "nameEn": "Sampiyon Filters Set",
+    "description": {
+      "ar": "فلاتر شامبيون المعتمدة لمختلف المولدات والمعدات الثقيلة بأعلى المعايير الأوروبية لضمان الأداء الأفضل.",
+      "en": "Certified Sampiyon filter kits for generators and heavy equipment compliant with European standards."
+    },
+    "descriptionEn": "Certified Sampiyon filter kits for generators and heavy equipment compliant with European standards.",
+    "category": "filters",
+    "image": "/images/products/filters/sampiyon-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "fleetguard-filters-set",
+    "name": {
+      "ar": "تشكيلة فلاتر فليت جارد (Fleetguard)",
+      "en": "Fleetguard Filters Collection"
+    },
+    "nameEn": "Fleetguard Filters Collection",
+    "description": {
+      "ar": "أنظمة ترشيح Fleetguard المتقدمة لمحركات كامينز (Cummins) وغيرها لحماية دوائر الوقود والزيت.",
+      "en": "Advanced Fleetguard filtration systems for Cummins and heavy diesel engines safeguarding oil and fuel circuits."
+    },
+    "descriptionEn": "Advanced Fleetguard filtration systems for Cummins and heavy diesel engines safeguarding oil and fuel circuits.",
+    "category": "filters",
+    "image": "/images/products/filters/fleetguard-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "baldwin-filters-set",
+    "name": {
+      "ar": "طقم فلاتر بالدوين الأمريكية (Baldwin)",
+      "en": "Baldwin Filters Set"
+    },
+    "nameEn": "Baldwin Filters Set",
+    "description": {
+      "ar": "فلاتر بالدوين فائقة التحمل والمصممة للعمل في أسوأ بيئات العمل الشاق والغبار المتصاعد.",
+      "en": "Heavy-duty Baldwin filters designed to withstand the toughest industrial and mining environments."
+    },
+    "descriptionEn": "Heavy-duty Baldwin filters designed to withstand the toughest industrial and mining environments.",
+    "category": "filters",
+    "image": "/images/products/filters/baldwin-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "mann-filter-filters-set",
+    "name": {
+      "ar": "تشكيلة مان فلتر الأصلية (MANN FILTER)",
+      "en": "MANN FILTER Collection"
+    },
+    "nameEn": "MANN FILTER Collection",
+    "description": {
+      "ar": "علامة مان فلتر الرائدة عالمياً في أنظمة تنقية الهواء والزيت والمياه للمحركات والصناعة.",
+      "en": "The world-leading MANN FILTER lineup for air, oil, and liquid filtration in industrial diesel engines."
+    },
+    "descriptionEn": "The world-leading MANN FILTER lineup for air, oil, and liquid filtration in industrial diesel engines.",
+    "category": "filters",
+    "image": "/images/products/filters/mann-filter-filters.png",
+    "inStock": true
+  },
+  {
+    "id": "atlas-copco-parts",
+    "name": {
+      "ar": "قطع غيار كمبريشنات أطلس كوبكو",
+      "en": "Atlas Copco Compressor Parts"
+    },
+    "nameEn": "Atlas Copco Compressor Parts",
+    "description": {
+      "ar": "تشكيلة واسعة من قطع الغيار الأصلية وعالية الجودة لكمبريشنات أطلس كوبكو، لضمان كفاءة وموثوقية التشغيل.",
+      "en": "A wide range of original and high-quality spare parts for Atlas Copco compressors, ensuring operational efficiency and reliability."
+    },
+    "descriptionEn": "A wide range of original and high-quality spare parts for Atlas Copco compressors, ensuring operational efficiency and reliability.",
     "category": "compressors",
-    "image": "/images/placeholder-product.jpg"
+    "image": "/images/products/m/01_Atlas_Copco.jpg",
+    "inStock": true
   },
   {
-    "id": "5",
+    "id": "ingersoll-rand-parts",
     "name": {
-      "ar": "سير محرك دينامو",
-      "en": "Dynamo Engine Belt"
+      "ar": "قطع غيار كمبريشنات إنجرسول راند",
+      "en": "Ingersoll Rand Compressor Parts"
     },
+    "nameEn": "Ingersoll Rand Compressor Parts",
     "description": {
-      "ar": "سير محرك عالي التحمل للمولدات والمعدات",
-      "en": "Heavy duty engine belt for generators and equipment"
+      "ar": "مجموعة متكاملة من قطع الغيار المتميزة والمطابقة لمعدات إنجرسول راند لضمان الأداء العالي.",
+      "en": "A comprehensive set of premium and compatible spare parts for Ingersoll Rand equipment to ensure high performance."
     },
-    "category": "spare_parts",
-    "image": "/images/placeholder-product.jpg"
+    "descriptionEn": "A comprehensive set of premium and compatible spare parts for Ingersoll Rand equipment to ensure high performance.",
+    "category": "compressors",
+    "image": "/images/products/m/02_Ingersoll_Rand.jpg",
+    "inStock": true
   },
   {
-    "id": "6",
+    "id": "compair-parts",
     "name": {
-      "ar": "فلتر هواء معدات ثقيلة",
-      "en": "Heavy Equipment Air Filter"
+      "ar": "قطع غيار كمبريشنات CompAir",
+      "en": "CompAir Compressor Parts"
     },
+    "nameEn": "CompAir Compressor Parts",
     "description": {
-      "ar": "فلتر هواء مصمم للبيئات القاسية والغبار",
-      "en": "Air filter designed for harsh environments and dust"
+      "ar": "قطع غيار أصلية ومطابقة لكمبريشنات CompAir، توفر حلول موثوقة لجميع احتياجات الضاغط.",
+      "en": "Original and compatible parts for CompAir compressors, providing reliable solutions for all compressor needs."
     },
-    "category": "filters",
-    "image": "/images/placeholder-product.jpg"
+    "descriptionEn": "Original and compatible parts for CompAir compressors, providing reliable solutions for all compressor needs.",
+    "category": "compressors",
+    "image": "/images/products/m/03_CompAir.jpg",
+    "inStock": true
+  },
+  {
+    "id": "kaeser-parts",
+    "name": {
+      "ar": "قطع غيار كمبريشنات كايسر",
+      "en": "KAESER Compressor Parts"
+    },
+    "nameEn": "KAESER Compressor Parts",
+    "description": {
+      "ar": "قطع غيار موثوقة وأصلية لكمبريشنات كايسر، مصممة لتحمل الضغوط العالية وتوفير أداء طويل الأمد.",
+      "en": "Reliable and genuine parts for KAESER compressors, engineered to withstand high pressures and provide long-lasting performance."
+    },
+    "descriptionEn": "Reliable and genuine parts for KAESER compressors, engineered to withstand high pressures and provide long-lasting performance.",
+    "category": "compressors",
+    "image": "/images/products/m/04_KAESER.jpg",
+    "inStock": true
+  },
+  {
+    "id": "oils-collection",
+    "name": {
+      "ar": "تشكيلة زيوت محركات عالمية",
+      "en": "Premium Motor Oils Collection"
+    },
+    "nameEn": "Premium Motor Oils Collection",
+    "description": {
+      "ar": "مجموعة مختارة من أفضل زيوت المحركات العالمية (Mobil, Shell, Castrol, Petromin) لضمان أداء مثالي وحماية محركك.",
+      "en": "A curated collection of top-tier global motor oils (Mobil, Shell, Castrol, Petromin) to ensure optimal performance and engine protection."
+    },
+    "descriptionEn": "A curated collection of top-tier global motor oils (Mobil, Shell, Castrol, Petromin) to ensure optimal performance and engine protection.",
+    "category": "oils",
+    "image": "/images/z/oils-collection.jpg",
+    "inStock": true
+  },
+  {
+    "id": "atlas-copco-separator",
+    "name": {
+      "ar": "فلتر فصل أطلس كوبكو",
+      "en": "Atlas Copco Separator Filter"
+    },
+    "nameEn": "Atlas Copco Separator Filter",
+    "description": {
+      "ar": "فلتر فصل عالي الكفاءة لكمبريشنات أطلس كوبكو، مصمم لفصل الزيت عن الهواء المضغوط بفعالية.",
+      "en": "High-efficiency separator filter for Atlas Copco compressors, designed to effectively separate oil from compressed air."
+    },
+    "descriptionEn": "High-efficiency separator filter for Atlas Copco compressors, designed to effectively separate oil from compressed air.",
+    "category": "compressors",
+    "image": "/images/k/01_Atlas_Copco_2x.jpg",
+    "inStock": true
+  },
+  {
+    "id": "ingersoll-rand-separator",
+    "name": {
+      "ar": "فلتر فصل إنجرسول راند",
+      "en": "Ingersoll Rand Separator Filter"
+    },
+    "nameEn": "Ingersoll Rand Separator Filter",
+    "description": {
+      "ar": "فلتر فصل متين ومقاوم للضغط العالي لكمبريشنات إنجرسول راند.",
+      "en": "Durable and high-pressure resistant separator filter for Ingersoll Rand compressors."
+    },
+    "descriptionEn": "Durable and high-pressure resistant separator filter for Ingersoll Rand compressors.",
+    "category": "compressors",
+    "image": "/images/k/02_Ingersoll_Rand_2x.jpg",
+    "inStock": true
+  },
+  {
+    "id": "compair-separator",
+    "name": {
+      "ar": "فلتر فصل كمبإير",
+      "en": "CompAir Separator Filter"
+    },
+    "nameEn": "CompAir Separator Filter",
+    "description": {
+      "ar": "فلتر فصل أصلي لكمبريشنات CompAir، يوفر أداءً موثوقاً وطويل الأمد.",
+      "en": "Genuine separator filter for CompAir compressors, providing reliable and long-lasting performance."
+    },
+    "descriptionEn": "Genuine separator filter for CompAir compressors, providing reliable and long-lasting performance.",
+    "category": "compressors",
+    "image": "/images/k/03_CompAir_2x.jpg",
+    "inStock": true
+  },
+  {
+    "id": "kaeser-separator",
+    "name": {
+      "ar": "فلتر فصل كايسر",
+      "en": "KAESER Separator Filter"
+    },
+    "nameEn": "KAESER Separator Filter",
+    "description": {
+      "ar": "فلتر فصل عالي الدقة مصمم خصيصاً لكمبريشنات KAESER للحفاظ على نقاء الهواء.",
+      "en": "High-precision separator filter specially designed for KAESER compressors to maintain air purity."
+    },
+    "descriptionEn": "High-precision separator filter specially designed for KAESER compressors to maintain air purity.",
+    "category": "compressors",
+    "image": "/images/k/04_KAESER_2x.jpg",
+    "inStock": true
   }
 ]

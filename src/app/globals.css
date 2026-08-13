@@ -8,10 +8,17 @@
   --color-hero: var(--hero);
   --color-text: var(--text);
   --color-text-secondary: var(--text-secondary);
-  --color-text-muted: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
+  --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-header-bg: var(--header-bg);
+  --color-footer-bg: var(--footer-bg);
+  --color-icon: var(--icon);
+  --color-icon-muted: var(--icon-muted);
 
   --font-arabic: var(--font-arabic), sans-serif;
   --font-english: var(--font-english), sans-serif;
@@ -26,10 +33,18 @@
     --primary-light: #1E293B;
     --hero: #0F172A;
     --text: #0F172A;
-    --text-secondary: #334155;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
     --accent: #D4A017;
     --accent-light: #FBBF24;
+    --accent-foreground: #0F172A;
     --border: #E2E8F0;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --header-bg: rgba(255, 255, 255, 0.92);
+    --footer-bg: #FFFFFF;
+    --icon: #475569;
+    --icon-muted: #94A3B8;
   }
 
   .dark {
@@ -39,21 +54,172 @@
     --primary: #F8FAFC;
     --primary-light: #F1F5F9;
     --hero: #0D1526;
-    --text: #FFFFFF;
+    --text: #F8FAFC;
     --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
     --accent: #FBBF24;
     --accent-light: #D4A017;
+    --accent-foreground: #0F172A;
     --border: #334155;
+    --muted: #1E293B;
+    --muted-foreground: #94A3B8;
+    --header-bg: rgba(11, 17, 32, 0.92);
+    --footer-bg: #1E293B;
+    --icon: #CBD5E1;
+    --icon-muted: #64748B;
   }
 }
 
+/* ============================================
+   Base Styles
+   ============================================ */
 body {
   background-color: var(--background);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Hero always stays dark regardless of theme */
 .hero-section {
   background-color: var(--hero);
+}
+
+/* تحسين العناوين */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* تحسين النصوص */
+p {
+  letter-spacing: 0.01em;
+}
+
+/* ============================================
+   Shadow Utilities
+   ============================================ */
+.shadow-glow {
+  box-shadow: 0 0 30px rgba(212, 160, 23, 0.15);
+}
+
+.shadow-glow-lg {
+  box-shadow: 0 0 60px rgba(212, 160, 23, 0.2);
+}
+
+.card-shadow {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.03);
+}
+
+.card-shadow-hover {
+  box-shadow:
+    0 2px 8px rgba(212, 160, 23, 0.08),
+    0 8px 24px rgba(212, 160, 23, 0.10),
+    0 16px 48px rgba(212, 160, 23, 0.06);
+}
+
+/* ============================================
+   Gradient Utilities
+   ============================================ */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #D4A017 0%, #FBBF24 100%);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.0) 0%,
+    rgba(15, 23, 42, 0.6) 50%,
+    rgba(15, 23, 42, 0.85) 100%
+  );
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #D4A017, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   Smooth scrolling
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   Selection color
+   ============================================ */
+::selection {
+  background-color: rgba(212, 160, 23, 0.25);
+  color: var(--text);
+}
+
+/* Glass effect for navbar */
+.glass {
+  background-color: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ============================================
+   Custom Scrollbar
+   ============================================ */
+
+/* عرض شريط التمرير وجعله رفيعاً */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* مسار الشريط (خلفية الشريط) - الوضع الفاتح */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* المقبض المتحرك - الوضع الفاتح */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+/* عند تحريك الماوس فوق المقبض - الوضع الفاتح */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --- إعدادات الوضع الداكن (Dark Mode) --- */
+.dark ::-webkit-scrollbar-track,
+html.dark ::-webkit-scrollbar-track {
+  background: #0B1120;
+}
+
+.dark ::-webkit-scrollbar-thumb,
+html.dark ::-webkit-scrollbar-thumb {
+  background: #D4A017;
+  border-radius: 6px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover,
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #FBBF24;
+}
+
+/* دعم متصفح Firefox */
+html {
+  scrollbar-color: #888 #f1f1f1;
+  scrollbar-width: thin;
+}
+
+html.dark {
+  scrollbar-color: #D4A017 #0B1120;
 }

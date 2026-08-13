@@ -18,7 +18,7 @@ export function ProductFilter({ categories, activeCategory, onSelect, locale }: 
           onClick={() => onSelect(cat.id)}
           className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
             activeCategory === cat.id
-              ? 'bg-accent text-white shadow-glow'
+              ? 'bg-accent text-accent-foreground shadow-glow font-bold'
               : 'bg-cards text-text-secondary border border-border hover:border-accent hover:text-accent'
           }`}
         >

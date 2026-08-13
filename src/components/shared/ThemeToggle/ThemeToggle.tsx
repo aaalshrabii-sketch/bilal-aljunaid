@@ -5,7 +5,11 @@ import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/Button';
 
-export function ThemeToggle() {
+interface ThemeToggleProps {
+  isTransparent?: boolean;
+}
+
+export function ThemeToggle({ isTransparent = false }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
@@ -21,7 +25,9 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="sm"
-      className="w-11 h-11 p-0 rounded-full"
+      className={`w-11 h-11 p-0 rounded-full ${
+        isTransparent ? 'hover:bg-white/10' : ''
+      }`}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       aria-label="Toggle theme"
     >
