@@ -76,6 +76,14 @@
   "brands": {
     "title": "Global Brands",
     "subtitle": "We are the authorized agent and distributor for the world's largest brands in our field",
-    "visitWebsite": "Visit Website"
+    "visitWebsite": "Visit Official Website",
+    "noBrands": "No brands currently available in this category.",
+    "categories": {
+      "all": "All",
+      "spare-parts": "Spare Parts",
+      "oils": "Oils",
+      "filters": "Filters",
+      "air-compressors": "Air Compressors"
+    }
   }
 }

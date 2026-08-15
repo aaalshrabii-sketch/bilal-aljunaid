@@ -1,8 +1,41 @@
 import { NextResponse } from 'next/server';
 
+// 🔒 تخزين آمن لـ Rate Limiting في الذاكرة
+const rateLimitMap = new Map<string, { count: number; timestamp: number }>();
+
 export async function POST(request: Request) {
   try {
-    // 1. قراءة البيانات من الطلب
+    // 🛡️ 1. Rate Limiting Protection (5 طلبات لكل IP في الدقيقة)
+    const ip =
+      request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+      request.headers.get('x-real-ip') ||
+      'unknown';
+    
+    const now = Date.now();
+    const windowMs = 60 * 1000; // دقيقة واحدة
+    const maxRequests = 5; // 5 رسائل في الدقيقة
+
+    // تنظيف السجلات القديمة المنتهية الصلاحية
+    for (const [key, value] of rateLimitMap) {
+      if (now - value.timestamp > windowMs) {
+        rateLimitMap.delete(key);
+      }
+    }
+
+    const record = rateLimitMap.get(ip);
+    if (record) {
+      if (record.count >= maxRequests) {
+        return NextResponse.json(
+          { error: 'لقد أرسلت العديد من الرسائل، يرجى المحاولة بعد دقيقة' },
+          { status: 429 }
+        );
+      }
+      record.count++;
+    } else {
+      rateLimitMap.set(ip, { count: 1, timestamp: now });
+    }
+
+    // 2. قراءة البيانات من الطلب
     let body: any;
     try {
       body = await request.json();
@@ -16,7 +49,7 @@ export async function POST(request: Request) {
     const { name, phone, email, subject, title, message } = body;
     const finalSubject = subject || title || 'رسالة جديدة من الموقع';
 
-    // 2. التحقق من الحقول الأساسية
+    // 3. التحقق من الحقول الأساسية (Server-side Validation)
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'الرجاء ملء جميع الحقول المطلوبة (الاسم، البريد، والرسالة)' },
@@ -24,14 +57,22 @@ export async function POST(request: Request) {
       );
     }
 
-    // 3. قراءة المفاتيح البيئية من الخادم
-    const serviceId = process.env.EMAILJS_SERVICE_ID || 'service_nhdkgwk';
-    const templateId = process.env.EMAILJS_TEMPLATE_ID || 'template_jji3wkk';
-    const publicKey = process.env.EMAILJS_PUBLIC_KEY || 'zFKyKdILC6tzB2aSR';
-    const privateKey = process.env.EMAILJS_PRIVATE_KEY || 'qccrZKZthASxh1WgiLU1u';
-    const receiverEmail = process.env.RECEIVER_EMAIL || 'belal25aljunaid@gmail.com';
+    // 4. قراءة المفاتيح البيئية من الخادم بدون كتابة أي مفاتيح صريحة في الكود المصدري
+    const serviceId = process.env.EMAILJS_SERVICE_ID;
+    const templateId = process.env.EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+    const privateKey = process.env.EMAILJS_PRIVATE_KEY;
+    const receiverEmail = process.env.RECEIVER_EMAIL;
 
-    // 4. إعداد بيانات الإرسال لـ EmailJS مع دعم Strict Mode (Private Key)
+    if (!serviceId || !templateId || (!publicKey && !privateKey)) {
+      console.error('Missing EmailJS server configuration variables');
+      return NextResponse.json(
+        { error: 'إعدادات البريد غير المكتملة على الخادم' },
+        { status: 500 }
+      );
+    }
+
+    // 5. إعداد بيانات الإرسال لـ EmailJS
     const emailjsData: Record<string, any> = {
       service_id: serviceId,
       template_id: templateId,
@@ -50,7 +91,7 @@ export async function POST(request: Request) {
       },
     };
 
-    // 5. إرسال الطلب عبر REST API إلى EmailJS
+    // 6. إرسال الطلب عبر REST API إلى EmailJS
     const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
       method: 'POST',
       headers: {
@@ -59,7 +100,7 @@ export async function POST(request: Request) {
       body: JSON.stringify(emailjsData),
     });
 
-    // 6. التحقق من الاستجابة ومعالجة الأخطاء
+    // 7. التحقق من الاستجابة ومعالجة الأخطاء
     if (!response.ok) {
       const errorData = await response.text();
       console.error('EmailJS Error Response:', response.status, errorData);
@@ -70,7 +111,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // 7. إرجاع استجابة النجاح
+    // 8. إرجاع استجابة النجاح
     return NextResponse.json(
       { message: 'تم إرسال الرسالة بنجاح! ✅' },
       { status: 200 }

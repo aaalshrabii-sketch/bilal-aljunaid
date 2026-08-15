@@ -1,200 +1,409 @@
 [
   {
-    "id": "perkins",
-    "name": "Perkins",
-    "category": "spare_parts",
-    "logo": "/images/brands/perkins.png"
+    "id": "b-001",
+    "name": "محركات بيركنز",
+    "nameEn": "Perkins Engines",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/perkins.svg",
+    "description": "محركات ديزل عالية الموثوقية وتعد من أشهر المحركات عالمياً",
+    "descriptionEn": "High-reliability diesel engines trusted worldwide",
+    "website": "https://www.perkins.com"
   },
   {
-    "id": "volvo",
-    "name": "Volvo",
-    "category": "spare_parts",
-    "logo": "/images/brands/volvo.png"
+    "id": "b-002",
+    "name": "إيفيكو ماجيروس",
+    "nameEn": "Iveco Magirus",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/iveco-magirus.svg",
+    "description": "قطع غيار ومحركات إيفيكو ماجيروس للشاحنات والمعدات الثقيلة",
+    "descriptionEn": "Iveco Magirus engine and truck spare parts",
+    "website": "https://www.iveco.com"
   },
   {
-    "id": "cat",
-    "name": "CAT",
-    "category": "spare_parts",
-    "logo": "/images/brands/cat.png"
+    "id": "b-003",
+    "name": "فولفو",
+    "nameEn": "Volvo",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/volvo.svg",
+    "description": "محركات وقطع غيار فولفو للشاحنات والمولدات والمعدات الثقيلة",
+    "descriptionEn": "Volvo engines and spare parts for heavy equipment and trucks",
+    "website": "https://www.volvo.com"
   },
   {
-    "id": "mtu",
-    "name": "MTU",
-    "category": "spare_parts",
-    "logo": "/images/brands/mtu.png"
+    "id": "b-004",
+    "name": "إيلينج",
+    "nameEn": "Eling",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/eling.svg",
+    "description": "حشوات وموانع تسرب ألمانية عالية الجودة للمحركات",
+    "descriptionEn": "High quality German gaskets and engine sealing solutions",
+    "website": "https://www.eling.com"
   },
   {
-    "id": "man",
-    "name": "MAN",
-    "category": "spare_parts",
-    "logo": "/images/brands/man.png"
+    "id": "b-005",
+    "name": "كولبنشميدت (KS)",
+    "nameEn": "KS Kolbenschmidt",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/ks-kolbenschmidt.svg",
+    "description": "مكبس وحلقات وسبايك محركات ألمانية متخصصة",
+    "descriptionEn": "German pistons, rings, and engine bearings",
+    "website": "https://www.ks-kolbenschmidt.com"
   },
   {
-    "id": "john-deere",
-    "name": "John Deere",
-    "category": "spare_parts",
-    "logo": "/images/brands/john-deere.png"
+    "id": "b-006",
+    "name": "إم تي يو (MTU)",
+    "nameEn": "MTU",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/mtu.svg",
+    "description": "محركات ديزل عملاقة للمولدات والمعدات الثقيلة",
+    "descriptionEn": "Large diesel engines for power generation and heavy machinery",
+    "website": "https://www.mtu.com"
   },
   {
-    "id": "deutz",
-    "name": "DEUTZ",
-    "category": "spare_parts",
-    "logo": "/images/brands/deutz.png"
+    "id": "b-007",
+    "name": "دويتس (DEUTZ)",
+    "nameEn": "DEUTZ",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/deutz.svg",
+    "description": "أنظمة محركات ديزل ألمانية متطورة وقطع غيارها",
+    "descriptionEn": "Advanced German diesel engine systems and components",
+    "website": "https://www.deutz.com"
   },
   {
-    "id": "doosan",
-    "name": "DOOSAN",
-    "category": "spare_parts",
-    "logo": "/images/brands/doosan.png"
+    "id": "b-008",
+    "name": "دوسان (DOOSAN)",
+    "nameEn": "DOOSAN",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/doosan.svg",
+    "description": "محركات ومعدات صناعية عالية الأداء",
+    "descriptionEn": "High-performance industrial engines and equipment",
+    "website": "https://www.doosan.com"
   },
   {
-    "id": "iveco",
-    "name": "IVECO",
-    "category": "spare_parts",
-    "logo": "/images/brands/iveco.png"
+    "id": "b-009",
+    "name": "كوبوتا (KUBOTA)",
+    "nameEn": "KUBOTA",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/kubota.svg",
+    "description": "محركات ديزل وصناعية يابانية مدمجة وقوية",
+    "descriptionEn": "Compact and powerful Japanese diesel engines",
+    "website": "https://www.kubota.com"
   },
   {
-    "id": "kubota",
-    "name": "KUBOTA",
-    "category": "spare_parts",
-    "logo": "/images/brands/kubota.png"
+    "id": "b-010",
+    "name": "ماهل (MAHLE)",
+    "nameEn": "MAHLE",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/mahle.svg",
+    "description": "فلاتر ومكونات محركات ألمانية فائقة الجودة",
+    "descriptionEn": "Premium German filters and engine components",
+    "website": "https://www.mahle.com"
   },
   {
-    "id": "mahle",
-    "name": "MAHLE",
-    "category": "spare_parts",
-    "logo": "/images/brands/mahle.png"
+    "id": "b-011",
+    "name": "بوش (BOSCH)",
+    "nameEn": "BOSCH",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/bosch.svg",
+    "description": "أنظمة حقن الوقود وقطع الغيار الكهربائية والأجزاء الميكانيكية",
+    "descriptionEn": "Fuel injection systems, electrical components, and automotive parts",
+    "website": "https://www.bosch.com"
   },
   {
-    "id": "ucb",
-    "name": "UCB",
-    "category": "spare_parts",
-    "logo": "/images/brands/ucb.png"
+    "id": "b-012",
+    "name": "إس كيه إف (SKF)",
+    "nameEn": "SKF",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/skf.svg",
+    "description": "محامل ورولمان بلي عالي التحمل للتطبيقات الصناعية",
+    "descriptionEn": "High-durability bearings and seals for industrial applications",
+    "website": "https://www.skf.com"
   },
   {
-    "id": "bosch",
-    "name": "BOSCH",
-    "category": "spare_parts",
-    "logo": "/images/brands/bosch.png"
+    "id": "b-013",
+    "name": "إف إيه جي (FAG)",
+    "nameEn": "FAG",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/fag.svg",
+    "description": "محامل ومكونات حركية ألمانية فائقة الدقة",
+    "descriptionEn": "Precision German bearings and motion components",
+    "website": "https://www.fag.com"
   },
   {
-    "id": "zf",
-    "name": "ZF",
-    "category": "spare_parts",
-    "logo": "/images/brands/zf.png"
+    "id": "b-014",
+    "name": "جوتزه (GOETZE)",
+    "nameEn": "GOETZE",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/goetze.svg",
+    "description": "حلقات المكبس وموانع التسرب للمحركات",
+    "descriptionEn": "Engine piston rings and face seals",
+    "website": "https://www.goetze.com"
   },
   {
-    "id": "skf",
-    "name": "SKF",
-    "category": "spare_parts",
-    "logo": "/images/brands/skf.png"
-  },
-  {
-    "id": "fag",
-    "name": "FAG",
-    "category": "spare_parts",
-    "logo": "/images/brands/fag.png"
-  },
-  {
-    "id": "goetze",
-    "name": "GOETZE",
-    "category": "spare_parts",
-    "logo": "/images/brands/goetze.png"
-  },
-  {
-    "id": "shell",
-    "name": "Shell",
+    "id": "b-015",
+    "name": "شيل (Shell)",
+    "nameEn": "Shell",
     "category": "oils",
-    "logo": "/images/brands/shell.png"
+    "categoryEn": "Oils",
+    "logo": "/images/brands/shell.svg",
+    "description": "زيوت وشحوم المحركات الهيدروليكية والصناعية",
+    "descriptionEn": "Engine lubricants, hydraulic oils, and industrial greases",
+    "website": "https://www.shell.com"
   },
   {
-    "id": "eni",
-    "name": "eni",
+    "id": "b-016",
+    "name": "كاسترول (Castrol)",
+    "nameEn": "Castrol",
     "category": "oils",
-    "logo": "/images/brands/eni.png"
+    "categoryEn": "Oils",
+    "logo": "/images/brands/castrol.svg",
+    "description": "زيوت عالية الأداء لمحركات الديزل والبنزين والمعدات",
+    "descriptionEn": "High-performance engine oils and industrial lubricants",
+    "website": "https://www.castrol.com"
   },
   {
-    "id": "castrol",
-    "name": "Castrol",
+    "id": "b-017",
+    "name": "بترومين (Petromin)",
+    "nameEn": "Petromin",
     "category": "oils",
-    "logo": "/images/brands/castrol.png"
+    "categoryEn": "Oils",
+    "logo": "/images/brands/petromin.svg",
+    "description": "زيوت وشحوم صناعية متطورة لمختلف التطبيقات",
+    "descriptionEn": "Advanced industrial oils and lubricants",
+    "website": "https://www.petromin.com"
   },
   {
-    "id": "petromin",
-    "name": "PETROMIN",
+    "id": "b-018",
+    "name": "فليت جارد (Fleetguard)",
+    "nameEn": "Fleetguard",
+    "category": "filters",
+    "categoryEn": "Filters",
+    "logo": "/images/brands/fleetguard.svg",
+    "description": "فلاتر الزيت والوقود والهواء فائقة الكفاءة لمحركات الديزل",
+    "descriptionEn": "High-efficiency fuel, lube, and air filtration systems",
+    "website": "https://www.fleetguard.com"
+  },
+  {
+    "id": "b-019",
+    "name": "أطلس كوبكو (Atlas Copco)",
+    "nameEn": "Atlas Copco",
+    "category": "air-compressors",
+    "categoryEn": "Air Compressors",
+    "logo": "/images/brands/atlas-copco.svg",
+    "description": "ضواغط الهواء وقطع غيار الكمبريشنات والحلول الصناعية",
+    "descriptionEn": "Air compressors, industrial power tools, and spare parts",
+    "website": "https://www.atlascopco.com"
+  },
+  {
+    "id": "b-020",
+    "name": "كومباير (CompAir)",
+    "nameEn": "CompAir",
+    "category": "air-compressors",
+    "categoryEn": "Air Compressors",
+    "logo": "/images/brands/compair.svg",
+    "description": "أنظمة ضواغط الهواء الحلزونية وقطع غيارها",
+    "descriptionEn": "Rotary screw air compressors and filtration equipment",
+    "website": "https://www.compair.com"
+  },
+  {
+    "id": "b-021",
+    "name": "بيتيكو (BETICO)",
+    "nameEn": "BETICO",
+    "category": "air-compressors",
+    "categoryEn": "Air Compressors",
+    "logo": "/images/brands/betico.png",
+    "description": "قطع غيار ومكونات الضواغط الهوائية",
+    "descriptionEn": "Air compressor parts and pneumatic solutions",
+    "website": "https://www.betico.com"
+  },
+  {
+    "id": "b-022",
+    "name": "إنجرسول راند (Ingersoll Rand)",
+    "nameEn": "Ingersoll Rand",
+    "category": "air-compressors",
+    "categoryEn": "Air Compressors",
+    "logo": "/images/brands/ingersoll-rand.svg",
+    "description": "كمبريشنات الهواء والمعدات الصناعية المتقدمة",
+    "descriptionEn": "Industrial air compressors and compressed air technologies",
+    "website": "https://www.ingersollrand.com"
+  },
+  {
+    "id": "b-023",
+    "name": "سولير (Sullair)",
+    "nameEn": "Sullair",
+    "category": "air-compressors",
+    "categoryEn": "Air Compressors",
+    "logo": "/images/brands/sullair.svg",
+    "description": "ضواغط الهواء الحلزونية للتطبيقات الشاقة",
+    "descriptionEn": "Heavy-duty stationary and portable air compressors",
+    "website": "https://www.sullair.com"
+  },
+  {
+    "id": "b-024",
+    "name": "فلاتر بالدوين (BALDWIN Filters)",
+    "nameEn": "BALDWIN Filters",
+    "category": "filters",
+    "categoryEn": "Filters",
+    "logo": "/images/brands/baldwin.png",
+    "description": "أنظمة تنقية وحماية المحركات الثقيلة والتطبيقات الشاقة",
+    "descriptionEn": "Heavy-duty filtration products for engines and equipment",
+    "website": "https://www.baldwinfilters.com"
+  },
+  {
+    "id": "b-025",
+    "name": "كاتربيلر (Caterpillar)",
+    "nameEn": "Caterpillar",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/caterpillar.png",
+    "description": "قطع غيار ومحركات ومعدات كاتربيلر الثقيلة",
+    "descriptionEn": "Caterpillar engines, construction equipment, and spare parts",
+    "website": "https://www.caterpillar.com"
+  },
+  {
+    "id": "b-026",
+    "name": "هينجست (Hengst Filtration)",
+    "nameEn": "Hengst Filtration",
+    "category": "filters",
+    "categoryEn": "Filters",
+    "logo": "/images/brands/hengst.svg",
+    "description": "فلاتر ألمانية متطورة للمحركات والأنظمة الصناعية",
+    "descriptionEn": "Advanced German filtration systems for engines and industry",
+    "website": "https://www.hengst.com"
+  },
+  {
+    "id": "b-027",
+    "name": "اتش كيو موتور سيرفيس (HQ Motor Service)",
+    "nameEn": "HQ Motor Service",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/hq-motorservice.png",
+    "description": "قطع غيار وخدمات عمرة صيانة المحركات الشاملة",
+    "descriptionEn": "Comprehensive engine parts and reconditioning solutions",
+    "website": "https://www.hqmotorservice.com"
+  },
+  {
+    "id": "b-028",
+    "name": "جي سي بي (JCB)",
+    "nameEn": "JCB",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/jcb.jpg",
+    "description": "قطع غيار ومكونات المعدات الإنشائية والصناعية",
+    "descriptionEn": "Construction machinery parts and heavy equipment spares",
+    "website": "https://www.jcb.com"
+  },
+  {
+    "id": "b-029",
+    "name": "جون دير (John Deere)",
+    "nameEn": "John Deere",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/john-deere.svg",
+    "description": "قطع غيار ومحركات المعدات الزراعية والإنشائية",
+    "descriptionEn": "Agricultural and construction machinery engine components",
+    "website": "https://www.deere.com"
+  },
+  {
+    "id": "b-030",
+    "name": "كايزر (KAESER)",
+    "nameEn": "KAESER",
+    "category": "air-compressors",
+    "categoryEn": "Air Compressors",
+    "logo": "/images/brands/kaeser.png",
+    "description": "أنظمة وضواغط الهواء المضغوط ألمانية الصنع",
+    "descriptionEn": "German compressed air systems and screw compressors",
+    "website": "https://www.kaeser.com"
+  },
+  {
+    "id": "b-031",
+    "name": "ليستر بيتر (Lister Petter)",
+    "nameEn": "Lister Petter",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/lister-petter.png",
+    "description": "محركات الديزل والمولدات الكهربائية وتطبيقاتها",
+    "descriptionEn": "Robust diesel engines and generator set components",
+    "website": "https://www.listerpetter.com"
+  },
+  {
+    "id": "b-032",
+    "name": "مان فلتر (MANN FILTER)",
+    "nameEn": "MANN FILTER",
+    "category": "filters",
+    "categoryEn": "Filters",
+    "logo": "/images/brands/mann.png",
+    "description": "فلاتر ألمانية رائدة في التصفية والنقاء الفائق",
+    "descriptionEn": "Leading German air, oil, and fuel filtration products",
+    "website": "https://www.mann-filter.com"
+  },
+  {
+    "id": "b-033",
+    "name": "شامبيون فلتر (Sampion Filter)",
+    "nameEn": "Sampion Filter",
+    "category": "filters",
+    "categoryEn": "Filters",
+    "logo": "/images/brands/sampion.png",
+    "description": "فلاتر هواء وزيت ووقود ذات موثوقية عالية",
+    "descriptionEn": "High-reliability air, oil, and fuel filters",
+    "website": "https://www.sampion.com"
+  },
+  {
+    "id": "b-034",
+    "name": "فيكتور رينز (Victor Reinz)",
+    "nameEn": "Victor Reinz",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/victor-reinz.png",
+    "description": "حشوات ووجه رأس المحرك وموانع التسرب المتطورة",
+    "descriptionEn": "Engine cylinder head gaskets and sealing technologies",
+    "website": "https://www.victorreinz.com"
+  },
+  {
+    "id": "b-035",
+    "name": "فلاتر ويكس (WIX Filters)",
+    "nameEn": "WIX Filters",
+    "category": "filters",
+    "categoryEn": "Filters",
+    "logo": "/images/brands/wix.png",
+    "description": "أنظمة الفلترة المتخصصة للشاحنات والمعدات",
+    "descriptionEn": "Specialized filtration for trucks, buses, and heavy equipment",
+    "website": "https://www.wixfilters.com"
+  },
+  {
+    "id": "b-036",
+    "name": "يانمار (Yanmar)",
+    "nameEn": "Yanmar",
+    "category": "spare-parts",
+    "categoryEn": "Spare Parts",
+    "logo": "/images/brands/yanmar.svg",
+    "description": "محركات ديزل يابانية فائقة الكفاءة والجودة",
+    "descriptionEn": "Premium Japanese diesel engines and equipment components",
+    "website": "https://www.yanmar.com"
+  },
+  {
+    "id": "b-037",
+    "name": "إيني (ENI)",
+    "nameEn": "ENI",
     "category": "oils",
-    "logo": "/images/brands/petromin.png"
-  },
-  {
-    "id": "fleetguard",
-    "name": "Fleetguard",
-    "category": "filters",
-    "logo": "/images/brands/fleetguard.png"
-  },
-  {
-    "id": "baldwin",
-    "name": "BALDWIN",
-    "category": "filters",
-    "logo": "/images/brands/baldwin.png"
-  },
-  {
-    "id": "wix",
-    "name": "WIX",
-    "category": "filters",
-    "logo": "/images/brands/wix.png"
-  },
-  {
-    "id": "mann-filter",
-    "name": "MANN FILTER",
-    "category": "filters",
-    "logo": "/images/brands/mann-filter.png"
-  },
-  {
-    "id": "hengst",
-    "name": "Hengst",
-    "category": "filters",
-    "logo": "/images/brands/hengst.png"
-  },
-  {
-    "id": "sampiyon",
-    "name": "Sampiyon",
-    "category": "filters",
-    "logo": "/images/brands/sampiyon.png"
-  },
-  {
-    "id": "atlas-copco",
-    "name": "Atlas Copco",
-    "category": "air-compressors",
-    "logo": "/images/brands/atlas-copco.png"
-  },
-  {
-    "id": "kaeser",
-    "name": "KAESER",
-    "category": "air-compressors",
-    "logo": "/images/brands/kaeser.png"
-  },
-  {
-    "id": "compair",
-    "name": "CompAir",
-    "category": "air-compressors",
-    "logo": "/images/brands/compair.png"
-  },
-  {
-    "id": "betico",
-    "name": "BETICO",
-    "category": "air-compressors",
-    "logo": "/images/brands/betico.png"
-  },
-  {
-    "id": "ingersoll-rand",
-    "name": "Ingersoll Rand",
-    "category": "air-compressors",
-    "logo": "/images/brands/ingersoll-rand.png"
-  },
-  {
-    "id": "sullair",
-    "name": "Sullair",
-    "category": "air-compressors",
-    "logo": "/images/brands/sullair.png"
+    "categoryEn": "Oils",
+    "logo": "/images/brands/eni.svg",
+    "description": "زيوت ومواد تشحيم إيطالية للمحركات والآلات الصناعية",
+    "descriptionEn": "Italian engine oils and industrial lubricants",
+    "website": "https://www.eni.com"
   }
 ]
