@@ -34,7 +34,7 @@ export function Footer() {
   const tCommon = useTranslations('common');
   const currentYear = new Date().getFullYear();
 
-  const quickLinks = navData.slice(0, 5).map(item => ({
+  const quickLinks = navData.map(item => ({
     href: item.href,
     label: t(item.key)
   }));
