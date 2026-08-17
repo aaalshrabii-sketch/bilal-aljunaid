@@ -85,5 +85,17 @@
       "filters": "Filters",
       "air-compressors": "Air Compressors"
     }
+  },
+  "about": {
+    "clients": {
+      "title": "Our Clients",
+      "subtitle": "We are proud of the trust of our clients from public and private sectors",
+      "more": "And many more companies and institutions"
+    },
+    "contact": {
+      "title": "Contact Us Now",
+      "subtitle": "Join our list of distinguished clients",
+      "button": "Contact Us"
+    }
   }
 }

@@ -1,10 +1,11 @@
 import { Container } from '@/components/shared/Container/Container';
 import { AboutStats } from '@/components/features/About/AboutStats';
-import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 import companyData from '@/data/company.json';
 import { generateMetadata as getSiteMetadata } from '../metadata';
 import { ShieldCheck, Award, Zap, HeartHandshake, Eye, Sparkles, Building2 } from 'lucide-react';
+import ScrollReveal from '@/components/animations/ScrollReveal/ScrollReveal';
+import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -21,6 +22,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const resolvedParams = await params;
   const locale = resolvedParams.locale as 'ar' | 'en';
   const isArabic = locale === 'ar';
+  const t = await getTranslations({ locale, namespace: 'about' });
 
   const title = isArabic ? "من نحن" : "About Us";
   const desc = companyData.slogan[locale];
@@ -166,17 +168,175 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </Container>
       </section>
 
-      {/* CTA */}
-      <section className="py-12">
-        <Container className="text-center">
-          <Link href={`/${locale}/contact`}>
-            <Button size="lg" className="bg-accent hover:bg-accent-light text-white px-12 text-lg font-semibold">
-              {isArabic ? "تواصل معنا الان" : "Contact Us Now"}
-            </Button>
-          </Link>
-        </Container>
-      </section>
+      {/* عملاؤنا */}
+      <ScrollReveal type="slideUp">
+        <section className="py-16 bg-cards/50 border-y border-border">
+          <Container>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-text mb-4">
+                {t('clients.title')}
+              </h2>
+              <p className="text-text-muted text-lg">
+                {t('clients.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {/* اتصالات */}
+              <div className="bg-cards p-6 rounded-xl border border-border">
+                <h3 className="text-lg font-semibold text-accent mb-4 flex items-center gap-2">
+                  📡 {isArabic ? "اتصالات" : "Telecommunications"}
+                </h3>
+                <ul className="space-y-2 text-text-muted">
+                  {isArabic ? (
+                    <>
+                      <li>• المؤسسة العامة للاتصالات</li>
+                      <li>• شركة يمن موبايل</li>
+                      <li>• شركة يو</li>
+                      <li>• شركة سبافون</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>• Public Telecommunication Corp</li>
+                      <li>• Yemen Mobile Co.</li>
+                      <li>• YOU Telecom</li>
+                      <li>• Sabafon Telecom</li>
+                    </>
+                  )}
+                </ul>
+              </div>
+
+              {/* حكومية */}
+              <div className="bg-cards p-6 rounded-xl border border-border">
+                <h3 className="text-lg font-semibold text-accent mb-4 flex items-center gap-2">
+                  🏛️ {isArabic ? "حكومية" : "Governmental"}
+                </h3>
+                <ul className="space-y-2 text-text-muted">
+                  {isArabic ? (
+                    <>
+                      <li>• الجمارك - إدارة العامة</li>
+                      <li>• المؤسسة العامة للطرق والجسور</li>
+                      <li>• المؤسسة العامة للكهرباء</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>• Customs - General Authority</li>
+                      <li>• Public Corp for Roads & Bridges</li>
+                      <li>• Public Electricity Corp</li>
+                    </>
+                  )}
+                </ul>
+              </div>
+
+              {/* إعلامية */}
+              <div className="bg-cards p-6 rounded-xl border border-border">
+                <h3 className="text-lg font-semibold text-accent mb-4 flex items-center gap-2">
+                  📺 {isArabic ? "إعلامية" : "Media"}
+                </h3>
+                <ul className="space-y-2 text-text-muted">
+                  {isArabic ? (
+                    <li>• المؤسسة العامة للإذاعة والتلفزيون</li>
+                  ) : (
+                    <li>• Public Radio & TV Corporation</li>
+                  )}
+                </ul>
+              </div>
+
+              {/* طبية */}
+              <div className="bg-cards p-6 rounded-xl border border-border">
+                <h3 className="text-lg font-semibold text-accent mb-4 flex items-center gap-2">
+                  💊 {isArabic ? "طبية" : "Medical"}
+                </h3>
+                <ul className="space-y-2 text-text-muted">
+                  {isArabic ? (
+                    <li>• شركة الأدوية</li>
+                  ) : (
+                    <li>• Medical & Pharma Corporation</li>
+                  )}
+                </ul>
+              </div>
+
+              {/* موانئ */}
+              <div className="bg-cards p-6 rounded-xl border border-border">
+                <h3 className="text-lg font-semibold text-accent mb-4 flex items-center gap-2">
+                  🚢 {isArabic ? "موانئ" : "Ports"}
+                </h3>
+                <ul className="space-y-2 text-text-muted">
+                  {isArabic ? (
+                    <li>• ميناء الحديدة</li>
+                  ) : (
+                    <li>• Hodeidah Port</li>
+                  )}
+                </ul>
+              </div>
+
+              {/* مالية */}
+              <div className="bg-cards p-6 rounded-xl border border-border">
+                <h3 className="text-lg font-semibold text-accent mb-4 flex items-center gap-2">
+                  💰 {isArabic ? "مالية" : "Financial"}
+                </h3>
+                <ul className="space-y-2 text-text-muted">
+                  {isArabic ? (
+                    <>
+                      <li>• كام بنك</li>
+                      <li>• بنك سبأ</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>• CAC Bank</li>
+                      <li>• Saba Bank</li>
+                    </>
+                  )}
+                </ul>
+              </div>
+
+              {/* خاصة */}
+              <div className="bg-cards p-6 rounded-xl border border-border md:col-span-2 lg:col-span-3">
+                <h3 className="text-lg font-semibold text-accent mb-4 flex items-center gap-2">
+                  🏢 {isArabic ? "خاصة" : "Private Sector"}
+                </h3>
+                <ul className="space-y-2 text-text-muted">
+                  {isArabic ? (
+                    <li>• شركات ومقاولات خاصة أخرى</li>
+                  ) : (
+                    <li>• Other private companies & contracting firms</li>
+                  )}
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-sm text-text-muted">
+                {t('clients.more')}
+              </p>
+            </div>
+          </Container>
+        </section>
+      </ScrollReveal>
+
+      {/* زر التواصل */}
+      <ScrollReveal type="slideUp">
+        <section className="py-16 bg-gradient-to-r from-accent/10 to-transparent">
+          <Container>
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-text mb-4">
+                {t('contact.title')}
+              </h2>
+              <p className="text-text-muted mb-8">
+                {t('contact.subtitle')}
+              </p>
+              <Link
+                href={`/${locale}/contact`}
+                className="inline-block px-8 py-4 bg-accent text-primary rounded-xl font-semibold hover:bg-accent/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-accent/25"
+              >
+                {t('contact.button')}
+              </Link>
+            </div>
+          </Container>
+        </section>
+      </ScrollReveal>
     </div>
   );
 }
+
 
