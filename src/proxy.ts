@@ -1,16 +1,13 @@
 import createMiddleware from 'next-intl/middleware';
-import { NextRequest } from 'next/server';
 
-const intlMiddleware = createMiddleware({
+export const proxy = createMiddleware({
   locales: ['ar', 'en'],
   defaultLocale: 'ar',
-  localePrefix: 'always',
+  localePrefix: 'never', // يخفي جميع اللغات من الرابط
+  localeDetection: true, // يتعرف على لغة المتصفح تلقائياً
 });
 
-export function proxy(request: NextRequest) {
-  return intlMiddleware(request);
-}
-
 export const config = {
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
+  matcher: ['/((?!api|_next|.*\\..*).*)']
 };
+

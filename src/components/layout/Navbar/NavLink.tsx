@@ -12,10 +12,17 @@ interface NavLinkProps {
   isTransparent?: boolean;
 }
 
-export function NavLink({ href, locale, children, onClick, isTransparent = false }: NavLinkProps) {
+export function NavLink({ href, children, onClick, isTransparent = false }: NavLinkProps) {
   const pathname = usePathname();
-  const targetPath = href === '/' ? `/${locale}` : (href.startsWith(`/${locale}`) ? href : `/${locale}${href}`);
-  const isActive = pathname === targetPath;
+
+  // With localePrefix:'never', URLs are clean (no /ar or /en prefix).
+  // Normalize href to always start with '/'
+  const targetPath = href.startsWith('/') ? href : `/${href}`;
+
+  // Strip any locale prefix from current pathname before comparing
+  const cleanPathname = pathname.replace(/^\/(ar|en)(\/|$)/, '/').replace(/\/$/, '') || '/';
+  const cleanTarget = targetPath.replace(/\/$/, '') || '/';
+  const isActive = cleanPathname === cleanTarget;
 
   return (
     <Link

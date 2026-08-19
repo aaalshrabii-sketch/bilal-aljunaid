@@ -1,43 +1,44 @@
 'use client';
 
-import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { Button } from '@/components/ui/Button';
+import { useLocale } from 'next-intl';
 
 interface LanguageSwitcherProps {
   isTransparent?: boolean;
 }
 
 export function LanguageSwitcher({ isTransparent = false }: LanguageSwitcherProps) {
-  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const currentLocale = useLocale();
 
-  const toggleLocale = () => {
-    const nextLocale = locale === 'ar' ? 'en' : 'ar';
-    // Replace the current locale in the pathname
-    const newPath = pathname.replace(`/${locale}`, `/${nextLocale}`);
-    // If the path doesn't start with locale (e.g. root '/'), prepend it
-    const finalPath = newPath.startsWith(`/${nextLocale}`) ? newPath : `/${nextLocale}${pathname}`;
-    
-    // Changing direction is handled by the RootLayout server side,
-    // but we can also set the cookie if needed. next-intl handles this.
-    router.push(finalPath);
-    router.refresh();
+  const switchLanguage = (locale: string) => {
+    // إزالة أي لغة من الرابط
+    const newPathname = pathname.replace(/^\/[a-z]{2}/, '');
+    router.push(`/${locale}${newPathname}`);
   };
 
   return (
-    <Button
-      variant="outline"
-      size="sm"
-      className={`font-medium min-w-[80px] ${
-        isTransparent
-          ? 'border-white/40 text-white hover:bg-white/10 hover:text-white hover:border-white'
-          : ''
-      }`}
-      onClick={toggleLocale}
-    >
-      {locale === 'ar' ? 'English' : 'العربية'}
-    </Button>
+    <div className="flex items-center gap-2">
+      <button
+        onClick={() => switchLanguage('ar')}
+        className={`px-2 py-1 text-sm rounded transition-colors ${
+          currentLocale === 'ar' ? 'text-accent font-bold' : (isTransparent ? 'text-white/60 hover:text-white' : 'text-text-muted hover:text-text')
+        }`}
+      >
+        ع
+      </button>
+      <span className={isTransparent ? 'text-white/40' : 'text-text-muted'}>|</span>
+      <button
+        onClick={() => switchLanguage('en')}
+        className={`px-2 py-1 text-sm rounded transition-colors ${
+          currentLocale === 'en' ? 'text-accent font-bold' : (isTransparent ? 'text-white/60 hover:text-white' : 'text-text-muted hover:text-text')
+        }`}
+      >
+        E
+      </button>
+    </div>
   );
 }
+
+export default LanguageSwitcher;

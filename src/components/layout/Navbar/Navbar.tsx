@@ -46,8 +46,9 @@ export function Navbar() {
 
   const activeTheme = mounted ? (resolvedTheme || theme || 'dark') : 'dark';
 
-  // Check if current page is Homepage
-  const isHomepage = !pathname || pathname === '/' || pathname === `/${locale}` || pathname === `/${locale}/`;
+  // Check if current page is Homepage - with localePrefix:'never', the path is clean
+  const cleanPathname = pathname.replace(/^\/(ar|en)(\/|$)/, '/').replace(/\/$/, '') || '/';
+  const isHomepage = cleanPathname === '/';
 
   // Context-aware background determination:
   // 1. Scrolled (Glass Header): Header background is glass (Light in Light Mode, Dark in Dark Mode).

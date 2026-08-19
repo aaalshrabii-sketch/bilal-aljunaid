@@ -12,7 +12,7 @@ export default function NotFound() {
           عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها
         </p>
         <Link
-          href="/ar"
+          href="/"
           className="inline-flex items-center px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300 hover:scale-105"
         >
           العودة إلى الرئيسية
