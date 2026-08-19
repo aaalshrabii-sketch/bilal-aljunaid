@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter, usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 
 interface LanguageSwitcherProps {
@@ -8,14 +7,13 @@ interface LanguageSwitcherProps {
 }
 
 export function LanguageSwitcher({ isTransparent = false }: LanguageSwitcherProps) {
-  const router = useRouter();
-  const pathname = usePathname();
   const currentLocale = useLocale();
 
   const switchLanguage = (locale: string) => {
-    // إزالة أي لغة من الرابط
-    const newPathname = pathname.replace(/^\/[a-z]{2}/, '');
-    router.push(`/${locale}${newPathname}`);
+    // حفظ اللغة في الـ Cookie
+    document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000`;
+    // إعادة تحميل الصفحة لتطبيق اللغة الجديدة
+    window.location.reload();
   };
 
   return (
@@ -23,7 +21,11 @@ export function LanguageSwitcher({ isTransparent = false }: LanguageSwitcherProp
       <button
         onClick={() => switchLanguage('ar')}
         className={`px-2 py-1 text-sm rounded transition-colors ${
-          currentLocale === 'ar' ? 'text-accent font-bold' : (isTransparent ? 'text-white/60 hover:text-white' : 'text-text-muted hover:text-text')
+          currentLocale === 'ar'
+            ? 'text-accent font-bold'
+            : isTransparent
+            ? 'text-white/60 hover:text-white'
+            : 'text-text-muted hover:text-text'
         }`}
       >
         ع
@@ -32,7 +34,11 @@ export function LanguageSwitcher({ isTransparent = false }: LanguageSwitcherProp
       <button
         onClick={() => switchLanguage('en')}
         className={`px-2 py-1 text-sm rounded transition-colors ${
-          currentLocale === 'en' ? 'text-accent font-bold' : (isTransparent ? 'text-white/60 hover:text-white' : 'text-text-muted hover:text-text')
+          currentLocale === 'en'
+            ? 'text-accent font-bold'
+            : isTransparent
+            ? 'text-white/60 hover:text-white'
+            : 'text-text-muted hover:text-text'
         }`}
       >
         E
