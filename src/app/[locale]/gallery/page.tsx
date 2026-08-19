@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { use } from 'react';
+import Image from 'next/image';
 import { Container } from '@/components/shared/Container/Container';
 import galleryData from '@/data/gallery.json';
 import { X } from 'lucide-react';
@@ -38,11 +39,15 @@ export default function GalleryPage({ params }: { params: Promise<{ locale: stri
               className="break-inside-avoid cursor-pointer group relative rounded-2xl overflow-hidden"
               onClick={() => setSelectedImage(item.url)}
             >
-              <img 
-                src={item.url} 
-                alt={isArabic ? item.title.ar : item.title.en} 
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="relative w-full aspect-[4/3]">
+                <Image 
+                  src={item.url} 
+                  alt={isArabic ? item.title.ar : item.title.en} 
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                  <h3 className="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                    {isArabic ? item.title.ar : item.title.en}

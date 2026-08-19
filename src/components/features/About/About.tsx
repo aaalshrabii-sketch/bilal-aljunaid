@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function About() {
   const locale = useLocale();
@@ -57,10 +58,12 @@ export function About() {
           >
             <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent mix-blend-overlay z-10" />
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1000" 
                 alt="About us"
-                className="object-cover w-full h-full"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             {/* Decorative element */}

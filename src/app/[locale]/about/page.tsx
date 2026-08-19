@@ -7,6 +7,8 @@ import { ShieldCheck, Award, Zap, HeartHandshake, Eye, Sparkles, Building2 } fro
 import ScrollReveal from '@/components/animations/ScrollReveal/ScrollReveal';
 import { getTranslations } from 'next-intl/server';
 
+import Image from 'next/image';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const isArabic = locale === 'ar';
@@ -76,11 +78,13 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               </div>
             </div>
 
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative border border-border/40">
-              <img 
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-border/40">
+              <Image 
                 src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1000" 
                 alt="Our Story"
-                className="object-cover w-full h-full"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>

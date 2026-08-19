@@ -4,6 +4,7 @@ import productsData from '@/data/products.json';
 import { notFound } from 'next/navigation';
 import { CheckCircle2, MessageCircle } from 'lucide-react';
 import { use } from 'react';
+import Image from 'next/image';
 
 export default function ProductDetailsPage({ params }: { params: Promise<{ locale: string, id: string }> }) {
   const resolvedParams = use(params);
@@ -38,17 +39,26 @@ export default function ProductDetailsPage({ params }: { params: Promise<{ local
             
             {/* Image Gallery */}
             <div className="flex flex-col gap-4">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-border/50">
-                <img 
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-border/50">
+                <Image 
                   src={product.image} 
                   alt={name} 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
                 />
               </div>
               <div className="flex gap-4">
                  {[1, 2, 3].map((i) => (
-                   <div key={i} className="w-24 h-24 rounded-lg overflow-hidden border-2 border-border/50 hover:border-accent cursor-pointer opacity-70 hover:opacity-100 transition-all">
-                      <img src={product.image} alt={`${name} ${i}`} className="w-full h-full object-cover" />
+                   <div key={i} className="relative w-24 h-24 rounded-lg overflow-hidden border-2 border-border/50 hover:border-accent cursor-pointer opacity-70 hover:opacity-100 transition-all">
+                      <Image 
+                        src={product.image} 
+                        alt={`${name} ${i}`} 
+                        fill
+                        className="object-cover"
+                        sizes="96px"
+                      />
                    </div>
                  ))}
               </div>

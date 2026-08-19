@@ -49,10 +49,32 @@ export async function POST(request: Request) {
     const { name, phone, email, subject, title, message } = body;
     const finalSubject = subject || title || 'رسالة جديدة من الموقع';
 
-    // 3. التحقق من الحقول الأساسية (Server-side Validation)
-    if (!name || !email || !message) {
+    // 3. التحقق من الحقول الأساسية وصحتها (Server-side Validation & Sanitization)
+    if (!name || typeof name !== 'string' || name.trim().length < 2 || name.trim().length > 100) {
       return NextResponse.json(
-        { error: 'الرجاء ملء جميع الحقول المطلوبة (الاسم، البريد، والرسالة)' },
+        { error: 'الاسم مطلوب ويجب أن يكون بين حرفين و 100 حرف' },
+        { status: 400 }
+      );
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || typeof email !== 'string' || !emailRegex.test(email.trim()) || email.length > 150) {
+      return NextResponse.json(
+        { error: 'عنوان البريد الإلكتروني غير صحيح' },
+        { status: 400 }
+      );
+    }
+
+    if (!message || typeof message !== 'string' || message.trim().length < 5 || message.trim().length > 2000) {
+      return NextResponse.json(
+        { error: 'الرسالة مطلوبة ويجب أن تكون بين 5 أحرف و 2000 حرف' },
+        { status: 400 }
+      );
+    }
+
+    if (phone && (typeof phone !== 'string' || phone.length > 20 || !/^[0-9+\s-]*$/.test(phone))) {
+      return NextResponse.json(
+        { error: 'رقم الهاتف غير صحيح' },
         { status: 400 }
       );
     }

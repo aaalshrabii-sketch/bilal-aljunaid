@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 
@@ -37,10 +38,12 @@ export function ProductCard({ product, locale = 'ar', index = 0, viewMode = 'gri
         <div className={`relative overflow-hidden bg-background shrink-0 ${
           isList ? 'w-full sm:w-48 h-48 sm:h-full' : 'w-full h-56'
         }`}>
-          <img 
+          <Image 
             src={product.image || "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600"} 
             alt={isArabic ? product.name.ar : product.name.en} 
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            fill
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
