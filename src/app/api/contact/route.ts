@@ -86,7 +86,7 @@ export async function POST(request: Request) {
     const privateKey = process.env.EMAILJS_PRIVATE_KEY;
     const receiverEmail = process.env.RECEIVER_EMAIL || 'belal25aljunaid@gmail.com';
 
-    if (!serviceId || !templateId || (!publicKey && !privateKey)) {
+    if (!serviceId || !templateId || !publicKey) {
       console.error('Missing EmailJS server configuration variables');
       return NextResponse.json(
         { error: 'إعدادات البريد غير المكتملة على الخادم' },
@@ -95,11 +95,13 @@ export async function POST(request: Request) {
     }
 
     // 5. إعداد بيانات الإرسال لـ EmailJS
+    // user_id = المفتاح العام (Public Key)
+    // accessToken = المفتاح الخاص (Private Key) — مطلوب لـ REST API
     const emailjsData: Record<string, any> = {
       service_id: serviceId,
       template_id: templateId,
-      user_id: publicKey || privateKey,
-      accessToken: privateKey,
+      user_id: publicKey,          // ← المفتاح العام (Public Key) EMAILJS_PUBLIC_KEY
+      accessToken: privateKey,     // ← المفتاح الخاص (Private Key) EMAILJS_PRIVATE_KEY
       template_params: {
         name: name,
         from_name: name,
