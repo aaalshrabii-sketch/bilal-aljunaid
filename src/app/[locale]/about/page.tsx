@@ -80,7 +80,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-border/40">
               <Image 
-                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1000" 
+                src="/images/about/company.jpg" 
                 alt="Our Story"
                 fill
                 className="object-cover"
