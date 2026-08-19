@@ -10,7 +10,7 @@ export function LanguageSwitcher({ isTransparent = false }: LanguageSwitcherProp
   const currentLocale = useLocale();
 
   const switchLanguage = (locale: string) => {
-    // حفظ اللغة في الـ Cookie
+    // تعيين اللغة في الـ Cookie
     document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000`;
     // إعادة تحميل الصفحة لتطبيق اللغة الجديدة
     window.location.reload();

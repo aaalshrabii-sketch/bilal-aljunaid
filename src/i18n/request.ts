@@ -1,14 +1,16 @@
 import { getRequestConfig } from 'next-intl/server';
+import { cookies } from 'next/headers';
 
-export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale;
-  
-  if (!locale) {
-    locale = 'ar';
-  }
+export default getRequestConfig(async () => {
+  // قراءة اللغة من الـ Cookie مباشرة
+  const cookieStore = await cookies();
+  const locale = cookieStore.get('NEXT_LOCALE')?.value || 'ar';
+
+  // التأكد من أن اللغة صحيحة
+  const validLocale = ['ar', 'en'].includes(locale) ? locale : 'ar';
 
   return {
-    locale,
-    messages: (await import(`../../messages/${locale}.json`)).default
+    locale: validLocale,
+    messages: (await import(`../../messages/${validLocale}.json`)).default
   };
 });
