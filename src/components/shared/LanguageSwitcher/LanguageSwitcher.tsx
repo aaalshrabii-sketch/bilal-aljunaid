@@ -1,6 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
+import { Button } from '@/components/ui/Button';
 
 interface LanguageSwitcherProps {
   isTransparent?: boolean;
@@ -9,41 +10,27 @@ interface LanguageSwitcherProps {
 export function LanguageSwitcher({ isTransparent = false }: LanguageSwitcherProps) {
   const currentLocale = useLocale();
 
-  const switchLanguage = (locale: string) => {
-    // تعيين اللغة في الـ Cookie
-    document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000`;
+  const toggleLanguage = () => {
+    const nextLocale = currentLocale === 'ar' ? 'en' : 'ar';
+    // حفظ اللغة في الـ Cookie
+    document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000`;
     // إعادة تحميل الصفحة لتطبيق اللغة الجديدة
     window.location.reload();
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <button
-        onClick={() => switchLanguage('ar')}
-        className={`px-2 py-1 text-sm rounded transition-colors ${
-          currentLocale === 'ar'
-            ? 'text-accent font-bold'
-            : isTransparent
-            ? 'text-white/60 hover:text-white'
-            : 'text-text-muted hover:text-text'
-        }`}
-      >
-        ع
-      </button>
-      <span className={isTransparent ? 'text-white/40' : 'text-text-muted'}>|</span>
-      <button
-        onClick={() => switchLanguage('en')}
-        className={`px-2 py-1 text-sm rounded transition-colors ${
-          currentLocale === 'en'
-            ? 'text-accent font-bold'
-            : isTransparent
-            ? 'text-white/60 hover:text-white'
-            : 'text-text-muted hover:text-text'
-        }`}
-      >
-        E
-      </button>
-    </div>
+    <Button
+      variant="outline"
+      size="sm"
+      className={`font-medium min-w-[80px] rounded-full transition-all ${
+        isTransparent
+          ? 'border-white/40 text-white hover:bg-white/10 hover:text-white hover:border-white'
+          : 'border-border text-text hover:border-accent hover:text-accent hover:bg-transparent'
+      }`}
+      onClick={toggleLanguage}
+    >
+      {currentLocale === 'ar' ? 'English' : 'العربية'}
+    </Button>
   );
 }
 
