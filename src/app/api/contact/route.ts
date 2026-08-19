@@ -79,12 +79,12 @@ export async function POST(request: Request) {
       );
     }
 
-    // 4. قراءة المفاتيح البيئية من الخادم بدون كتابة أي مفاتيح صريحة في الكود المصدري
-    const serviceId = process.env.EMAILJS_SERVICE_ID;
-    const templateId = process.env.EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+    // 4. قراءة المفاتيح البيئية من الخادم بشكل مرن
+    const serviceId = process.env.EMAILJS_SERVICE_ID || process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.EMAILJS_TEMPLATE_ID || process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.EMAILJS_PUBLIC_KEY || process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
     const privateKey = process.env.EMAILJS_PRIVATE_KEY;
-    const receiverEmail = process.env.RECEIVER_EMAIL;
+    const receiverEmail = process.env.RECEIVER_EMAIL || 'belal25aljunaid@gmail.com';
 
     if (!serviceId || !templateId || (!publicKey && !privateKey)) {
       console.error('Missing EmailJS server configuration variables');
