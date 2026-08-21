@@ -11,15 +11,6 @@ export function Brands() {
 
   const title = isArabic ? "الماركات التي نعمل معها" : "Brands We Work With";
 
-  const brands = [
-    "Caterpillar",
-    "Perkins",
-    "Cummins",
-    "Volvo Penta",
-    "John Deere",
-    "Fleetguard",
-    "Donaldson"
-  ];
 
   return (
     <section className="py-20 bg-cards/50 border-y border-border/50">
@@ -35,7 +26,7 @@ export function Brands() {
           </motion.h2>
         </div>
 
-        <BrandSlider brands={brands} />
+        <BrandSlider />
       </Container>
     </section>
   );

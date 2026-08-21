@@ -1,41 +1,55 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import Image from 'next/image';
+import 'swiper/css';
+import brandsData from '@/data/brands.json';
 
-interface BrandSliderProps {
-  brands: string[];
-}
-
-export function BrandSlider({ brands }: BrandSliderProps) {
-  // Duplicate brands array to create seamless loop
-  const duplicatedBrands = [...brands, ...brands];
+export default function BrandSlider() {
+  // مضاعفة البيانات للحصول على تأثير لا نهائي
+  const doubledBrands = [...brandsData, ...brandsData];
 
   return (
-    <div className="relative w-full overflow-hidden flex items-center py-8">
-      {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
-
-      <motion.div
-        className="flex items-center gap-16 md:gap-24 pl-16 md:pl-24 w-max"
-        animate={{
-          x: ["0%", "-50%"]
+    <div className="w-full overflow-hidden py-4">
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={30}
+        slidesPerView={4}
+        loop={true}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+          stopOnLastSlide: false,
         }}
-        transition={{
-          duration: 30,
-          ease: "linear",
-          repeat: Infinity,
+        speed={3000}
+        breakpoints={{
+          320: { slidesPerView: 2, spaceBetween: 20 },
+          640: { slidesPerView: 3, spaceBetween: 25 },
+          1024: { slidesPerView: 4, spaceBetween: 30 },
+          1280: { slidesPerView: 5, spaceBetween: 30 },
         }}
+        className="cursor-grab active:cursor-grabbing"
       >
-        {duplicatedBrands.map((brand, index) => (
-          <div 
-            key={index} 
-            className="text-2xl md:text-3xl font-extrabold text-text-secondary whitespace-nowrap hover:text-accent transition-colors duration-300 select-none cursor-default"
-          >
-            {brand}
-          </div>
+        {doubledBrands.map((brand, index) => (
+          <SwiperSlide key={`${brand.id}-${index}`}>
+            <div className="flex items-center justify-center p-4 bg-cards rounded-xl border border-border hover:border-accent/30 transition-all duration-300 h-24">
+              <div className="relative w-24 h-12">
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  fill
+                  className="object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  sizes="(max-width: 768px) 80px, 120px"
+                />
+              </div>
+            </div>
+          </SwiperSlide>
         ))}
-      </motion.div>
+      </Swiper>
     </div>
   );
 }
+
+export { BrandSlider };
