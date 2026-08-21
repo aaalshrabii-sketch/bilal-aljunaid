@@ -84,7 +84,7 @@ export async function POST(request: Request) {
     const templateId = process.env.EMAILJS_TEMPLATE_ID || process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.EMAILJS_PUBLIC_KEY || process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
     const privateKey = process.env.EMAILJS_PRIVATE_KEY;
-    const receiverEmail = process.env.RECEIVER_EMAIL || 'belal25aljunaid@gmail.com';
+    const receiverEmail = process.env.RECEIVER_EMAIL || 'info@aljunaidtrade.com';
 
     if (!serviceId || !templateId || !publicKey) {
       console.error('Missing EmailJS server configuration variables');
