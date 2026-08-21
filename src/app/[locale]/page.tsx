@@ -10,7 +10,7 @@ import { WhyUs } from '@/components/features/WhyUs';
 
 export default function HomePage() {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+    window.scrollTo(0, 0);
   }, []);
 
   return (

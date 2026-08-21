@@ -18,7 +18,7 @@ export default function BrandSlider() {
         slidesPerView={4}
         loop={true}
         autoplay={{
-          delay: 0,
+          delay: 1,
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
           stopOnLastSlide: false,

@@ -12,62 +12,43 @@ interface HeroContentProps {
 export function HeroContent({ locale }: HeroContentProps) {
   const isArabic = locale === 'ar';
 
-  const part1 = isArabic ? "قطع غيار معدات الديزل" : "Diesel Equipment Parts";
-  const part2 = isArabic ? "- فلاتر - زيوت محركات" : "- Filters - Engine Oils";
-    
-  const subheadline = isArabic
-    ? "كل شحنة هي بداية فصل جديد من الإنجاز"
-    : "Every shipment is the beginning of a new chapter of achievement";
-    
-  const primaryBtn = isArabic ? "استكشف المنتجات" : "Explore Products";
-  const secondaryBtn = isArabic ? "تواصل معنا" : "Contact Us";
+  const part1 = isArabic ? 'قطع غيار معدات الديزل' : 'Diesel Equipment Parts';
+  const part2 = isArabic ? '- فلاتر - زيوت محركات' : '- Filters - Engine Oils';
 
-  const letterVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.03, duration: 0.2 },
-    }),
-  };
+  const subheadline = isArabic
+    ? 'كل شحنة هي بداية فصل جديد من الإنجاز'
+    : 'Every shipment is the beginning of a new chapter of achievement';
+
+  const primaryBtn = isArabic ? 'استكشف المنتجات' : 'Explore Products';
+  const secondaryBtn = isArabic ? 'تواصل معنا' : 'Contact Us';
 
   return (
     <div className="relative z-10 max-w-3xl">
-      <motion.h1 
-        initial="hidden"
-        animate="visible"
-        className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-text mb-6"
-      >
-        <span className="text-gradient inline-block">
-          {part1.split("").map((char, index) => (
-            <motion.span key={index} custom={index} variants={letterVariants}>
-              {char}
-            </motion.span>
-          ))}
-        </span>
-        <br />
-        <span className="inline-block">
-          {part2.split("").map((char, index) => (
-            <motion.span key={index} custom={part1.length + index} variants={letterVariants}>
-              {char}
-            </motion.span>
-          ))}
-        </span>
-      </motion.h1>
-
-      <motion.p 
+      {/* ✅ إصلاح: animation واحد على h1 كاملاً بدلاً من 43 motion.span فردي */}
+      <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-text mb-6"
+      >
+        <span className="text-gradient inline-block">{part1}</span>
+        <br />
+        <span className="inline-block">{part2}</span>
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
         className="text-lg md:text-xl text-text-secondary mb-10 max-w-2xl"
       >
         {subheadline}
       </motion.p>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
         className="flex flex-col sm:flex-row gap-4"
       >
         <Link href={`/${locale}/products`}>

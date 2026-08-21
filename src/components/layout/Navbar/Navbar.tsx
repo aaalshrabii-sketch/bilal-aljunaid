@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Container } from '@/components/shared/Container/Container';
 import { Logo } from '@/components/shared/Logo/Logo';
@@ -20,22 +21,28 @@ export function Navbar() {
   const { resolvedTheme, theme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const ticking = useRef(false);
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Reset scroll position instantly on route changes to prevent Framer Motion scroll offsets
-  React.useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
-  }, [pathname]);
+  // ✅ إصلاح: حذف scrollTo المكرر — يكفي الموجود في page.tsx
+  // تم حذف useEffect الخاص بـ pathname هنا لأنه كان يُسبب تعليق مزدوج
 
+  // ✅ إصلاح: throttle scroll listener بـ requestAnimationFrame
   React.useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking.current) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
