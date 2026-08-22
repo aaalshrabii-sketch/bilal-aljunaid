@@ -27,8 +27,8 @@ export default function ContactPage() {
     {
       icon: <Phone className="w-5 h-5 opacity-75" />,
       label: t('landline'),
-      value: companyData.contact.landline,
-      href: `tel:${companyData.contact.landline}`,
+      value: companyData.contact.landlineFormatted,
+      href: `tel:+967${companyData.contact.landline.replace(/^0+/, '')}`,
     },
     {
       icon: <Mail className="w-5 h-5" />,
