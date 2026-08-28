@@ -1,14 +1,16 @@
 import companyData from '@/data/company.json';
 
 export function SchemaMarkup() {
-  const schemaData = {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aljunaidtrade.com';
+
+  const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: companyData.name.ar,
     alternateName: companyData.name.en,
     description: companyData.description.ar,
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://bilalaljunaid.com',
-    logo: 'https://bilalaljunaid.com/images/logo.png',
+    url: baseUrl,
+    logo: `${baseUrl}/images/logo.png`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'صنعاء',
@@ -26,12 +28,26 @@ export function SchemaMarkup() {
     ],
   };
 
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: companyData.name.ar,
+    url: baseUrl,
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+    </>
   );
 }
 
 export default SchemaMarkup;
+
