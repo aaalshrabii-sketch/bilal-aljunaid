@@ -14,7 +14,7 @@ export function HeroBackground() {
       <div className="absolute inset-0 bg-background transition-colors duration-300" />
 
       {/* Interactive 3D Industrial Canvas Layer */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <Hero3DBackgroundScene />
       </div>
 

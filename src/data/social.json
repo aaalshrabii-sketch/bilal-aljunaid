@@ -7,17 +7,24 @@
     "url": "https://wa.me/967779924444"
   },
   {
-    "id": "telegram",
-    "name": "تليجرام",
-    "nameEn": "Telegram",
-    "icon": "Send",
-    "url": "https://t.me/bilalaljunaid"
+    "id": "tiktok",
+    "name": "تيك توك",
+    "nameEn": "TikTok",
+    "icon": "Music",
+    "url": "https://www.tiktok.com/@user15009785674928"
+  },
+  {
+    "id": "instagram",
+    "name": "انستغرام",
+    "nameEn": "Instagram",
+    "icon": "Instagram",
+    "url": "https://www.instagram.com/bilalaljunaid3"
   },
   {
     "id": "facebook",
     "name": "فيسبوك",
     "nameEn": "Facebook",
     "icon": "Facebook",
-    "url": "https://www.facebook.com/people/%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%AC%D9%86%D9%8A%D8%AF/100067086214523/"
+    "url": "https://www.facebook.com/share/1GLK77cCXh/"
   }
 ]

@@ -56,7 +56,8 @@ export function useParallaxScroll(heroHeight: number = 800) {
 
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
-      const progress = Math.min(Math.max(scrollY / (heroHeight || window.innerHeight), 0), 1.5);
+      // تقييد scrollProgress بين 0 و 1 لمنع تحرك العناصر خارج إطار الكاميرا
+      const progress = Math.min(Math.max(scrollY / (heroHeight || window.innerHeight), 0), 1.0);
       scrollRef.current = progress;
     };
 

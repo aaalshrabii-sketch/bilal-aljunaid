@@ -216,3 +216,34 @@ html {
 html.dark {
   scrollbar-color: #D4A017 #0B1120;
 }
+
+/* ============================================
+   إصلاح مشكلة الخلفية 3D في الهاتف
+   Three.js Canvas Containment Fix
+   ============================================ */
+
+/* تثبيت الـ Canvas داخل حاويته ومنع الـ overflow */
+.hero-canvas-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-canvas-wrapper canvas {
+  display: block;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  /* منع الـ Canvas من التسبب في تمرير أفقي أو عمودي */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* على الهاتف: تأكيد إضافي */
+@media (max-width: 768px) {
+  .hero-canvas-wrapper canvas {
+    touch-action: none;
+  }
+}

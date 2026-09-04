@@ -24,7 +24,8 @@ export function Products() {
     { id: 'spare_parts', label: { ar: "قطع غيار", en: "Spare Parts" } },
     { id: 'oils', label: { ar: "زيوت", en: "Oils" } },
     { id: 'filters', label: { ar: "فلاتر", en: "Filters" } },
-    { id: 'compressors', label: { ar: "كمبريشنات هواء", en: "Air Compressors" } }
+    { id: 'compressors', label: { ar: "كمبريشنات هواء", en: "Air Compressors" } },
+    { id: 'airGuns', label: { ar: "مسدسات هواء", en: "Air Guns" } }
   ];
 
   const filteredProducts = activeCategory === 'all' 

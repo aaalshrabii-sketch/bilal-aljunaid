@@ -25,6 +25,7 @@ export default function ProductsPage({ params }: { params: Promise<{ locale: str
     { id: 'oils', label: { ar: 'زيوت', en: 'Oils' } },
     { id: 'filters', label: { ar: 'فلاتر', en: 'Filters' } },
     { id: 'compressors', label: { ar: 'كمبريشنات هواء', en: 'Air Compressors' } },
+    { id: 'airGuns', label: { ar: 'مسدسات هواء', en: 'Air Guns' } },
   ];
 
   const filteredProducts = React.useMemo(() => {

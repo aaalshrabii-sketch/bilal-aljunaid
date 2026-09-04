@@ -350,5 +350,37 @@
     "category": "compressors",
     "image": "/images/k/04_KAESER_2x.jpg",
     "inStock": true
+  },
+  {
+    "id": "air-gun-1",
+    "name": {
+      "ar": "مسدس هواء احترافي",
+      "en": "Professional Air Gun"
+    },
+    "nameEn": "Professional Air Gun",
+    "description": {
+      "ar": "مسدس هواء عالي الكفاءة ومصنوع من مواد متينة للاستخدامات الصناعية والورش.",
+      "en": "High-efficiency air gun made of durable materials for industrial and workshop applications."
+    },
+    "descriptionEn": "High-efficiency air gun made of durable materials for industrial and workshop applications.",
+    "category": "airGuns",
+    "image": "/images/products/air-gun-1.jpg",
+    "inStock": true
+  },
+  {
+    "id": "air-gun-2",
+    "name": {
+      "ar": "مسدس هواء دقيق",
+      "en": "Heavy Duty Precision Air Gun"
+    },
+    "nameEn": "Heavy Duty Precision Air Gun",
+    "description": {
+      "ar": "مسدس هواء للمهام الثقيلة بتصميم دقيق ومقبض مريح للعمل المتواصل.",
+      "en": "Heavy duty air gun with precision design and comfortable grip for continuous operation."
+    },
+    "descriptionEn": "Heavy duty air gun with precision design and comfortable grip for continuous operation.",
+    "category": "airGuns",
+    "image": "/images/products/air-gun-2.jpg",
+    "inStock": true
   }
 ]
