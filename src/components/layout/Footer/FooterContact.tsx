@@ -29,6 +29,11 @@ export function FooterContact({ title, address, phone, email }: FooterContactPro
             +967 01324523
           </a>
         </li>
+        <li className="flex items-center gap-3 ps-8">
+          <a href="tel:+9671334455" className="hover:text-accent transition-colors inline-block" dir="ltr">
+            +967 01334455
+          </a>
+        </li>
         <li className="flex items-center gap-3">
           <Mail className="w-5 h-5 text-accent shrink-0" />
           <a href={`mailto:${email}`} className="hover:text-accent transition-colors" dir="ltr">

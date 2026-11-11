@@ -31,6 +31,12 @@ export default function ContactPage() {
       href: `tel:+967${companyData.contact.landline.replace(/^0+/, '')}`,
     },
     {
+      icon: <Phone className="w-5 h-5 opacity-75" />,
+      label: t('landline'),
+      value: companyData.contact.landlineFormatted2,
+      href: `tel:+967${companyData.contact.landline2.replace(/^0+/, '')}`,
+    },
+    {
       icon: <Mail className="w-5 h-5" />,
       label: isArabic ? 'البريد الإلكتروني' : 'Email',
       value: companyData.contact.email,
